@@ -21,7 +21,7 @@ Fitur:
             F8  / F7  = WPM naik / turun (5 per tekan)
 
 Instalasi:
-    pip install pynput requests pyperclip
+    python -m pip install -r requirements.txt
 
 Contoh:
     python AutoKetik.py --url "https://docs.google.com/document/d/XXXX/edit" --wpm 40-75
@@ -58,7 +58,7 @@ except ModuleNotFoundError:
 def require_pynput():
     if keyboard is None or Controller is None or Key is None:
         raise RuntimeError(
-            "Paket pynput belum terinstal. Jalankan: python -m pip install pynput requests pyperclip"
+            "python -m pip install -r requirements.txt"
         )
 
 # --------------------------------------------------------------------------
