@@ -85,7 +85,7 @@ Contoh konfigurasi:
 
 ```powershell
 python AutoKetik.py --file "naskah.html" --wpm 40-75 --typo-rate 0.01-0.04 --wave-period 180
-``
+```
 
 Daftar lengkap opsi tersedia melalui:
 
