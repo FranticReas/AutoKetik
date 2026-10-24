@@ -13,7 +13,7 @@ AutoKetik adalah skrip Python yang mengambil teks dari file, clipboard, atau Goo
 Instal paket:
 
 ```powershell
-python -m pip install pynput requests pyperclip
+python -m pip install -r requirements.txt
 ```
 
 ## Menjalankan
