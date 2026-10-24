@@ -46,8 +46,20 @@ import time
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 
-from pynput import keyboard
-from pynput.keyboard import Controller, Key
+try:
+    from pynput import keyboard
+    from pynput.keyboard import Controller, Key
+except ModuleNotFoundError:
+    keyboard = None
+    Controller = None
+    Key = None
+
+
+def require_pynput():
+    if keyboard is None or Controller is None or Key is None:
+        raise RuntimeError(
+            "Paket pynput belum terinstal. Jalankan: python -m pip install pynput requests pyperclip"
+        )
 
 # --------------------------------------------------------------------------
 # Data pendukung
@@ -392,12 +404,9 @@ def plan(blocks, base_size: float, mac: bool, base_spacing=(1.15, 0.0, 0.0),
             if tl != st["left"]:
                 hot((M,), "]" if tl > st["left"] else "[", abs(tl - st["left"]))
                 st["left"] = tl
-            if tf != st["first"]:
-                if tf > st["first"]:
-                    hot((), Key.tab, tf - st["first"])
-                else:
-                    hot((Key.shift,), Key.tab, st["first"] - tf)
-                st["first"] = tf
+            if tf:
+                hot((), Key.tab, tf)
+            st["first"] = tf
 
         # ---------- isi (run) ----------
         for r in b.runs:
@@ -468,6 +477,7 @@ def normalize(text: str) -> str:
 
 class Typist:
     def __init__(self, cfg: Config):
+        require_pynput()
         self.cfg = cfg
         self.kb = Controller()
         self.stop = threading.Event()
@@ -850,6 +860,7 @@ def main():
             assert len(bs) == 3
         except Exception:
             sys.exit("--base-spacing harus 3 angka, mis. 1.15,0,0")
+        require_pynput()
         brk = parse_range(args.break_every, int) if args.break_every else None
         creg = re.compile(args.chapter_regex, re.I) if args.chapter_regex else None
         actions = plan(blocks, args.base_size, args.mac, bs, brk, args.break_level, creg)
