@@ -86,21 +86,18 @@ python AutoKetik.py --file "naskah.html" --preview
 
 ## Pengaturan umum
 
-| Opsi | Kegunaan | Contoh |
-|---|---|---|
-| `--wpm` | Kecepatan mengetik dalam kata per menit; menerima angka atau rentang | `--wpm 55` atau `--wpm 40-75` |
-| `--typo-rate` | Frekuensi simulasi typo; `0` menonaktifkannya | `--typo-rate 0` atau `--typo-rate 0.01-0.04` |
-| `--typo-words` | Rentang jumlah kata yang terus diketik sebelum sadar ada typo lalu menghapusnya | `--typo-words 1-3` atau `--typo-words 0-2` |
-| `--typo-delay` | Jeda "sadar ada typo" sebelum mulai membenarkan typo, dalam detik | `--typo-delay 0.8-2.0` |
-| `--shift-delay` | Jeda tambahan saat mengetik karakter spesial yang memerlukan kombinasi Shift (detik) | `--shift-delay 0.12-0.3` |
-| `--delay` | Hitung mundur sebelum mulai, dalam detik | `--delay 12` |
-| `--no-format` | Abaikan format dan ketik sebagai teks polos | `--url "..." --no-format` |
-| `--wave-period` | Durasi siklus perubahan kecepatan, dalam detik | `--wave-period 180` |
-| `--start` | Mulai dari kecepatan maksimum (`fast`) atau minimum (`slow`) | `--start slow` |
-| `--think-every` | Rentang jumlah kata di antara jeda berpikir | `--think-every 8-25` |
-| `--think-pause` | Rentang durasi jeda berpikir, dalam detik | `--think-pause 1.5-6` |
-| `--break-every` | Istirahat setelah sejumlah heading bab pada sumber HTML/Google Docs berformat; lanjutkan dengan F9 | `--break-every 3` atau `--break-every 2-4` |
-| `--preview` | Tampilkan hasil pembacaan/parsing tanpa mengetik | `--file "naskah.html" --preview` |
+| Opsi            | Kegunaan                                                                                           | Contoh                                       |
+| --------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| `--wpm`         | Kecepatan mengetik dalam kata per menit; menerima angka atau rentang                               | `--wpm 55` atau `--wpm 40-75`                |
+| `--typo-rate`   | Frekuensi simulasi typo; `0` menonaktifkannya                                                      | `--typo-rate 0` atau `--typo-rate 0.01-0.04` |
+| `--delay`       | Hitung mundur sebelum mulai, dalam detik                                                           | `--delay 12`                                 |
+| `--no-format`   | Abaikan format dan ketik sebagai teks polos                                                        | `--url "..." --no-format`                    |
+| `--wave-period` | Durasi siklus perubahan kecepatan, dalam detik                                                     | `--wave-period 180`                          |
+| `--start`       | Mulai dari kecepatan maksimum (`fast`) atau minimum (`slow`)                                       | `--start slow`                               |
+| `--think-every` | Rentang jumlah kata di antara jeda berpikir                                                        | `--think-every 8-25`                         |
+| `--think-pause` | Rentang durasi jeda berpikir, dalam detik                                                          | `--think-pause 1.5-6`                        |
+| `--break-every` | Istirahat setelah sejumlah heading bab pada sumber HTML/Google Docs berformat; lanjutkan dengan F9 | `--break-every 3` atau `--break-every 2-4`   |
+| `--preview`     | Tampilkan hasil pembacaan/parsing tanpa mengetik                                                   | `--file "naskah.html" --preview`             |
 
 Contoh konfigurasi:
 
@@ -116,12 +113,12 @@ python AutoKetik.py --help
 
 ## Tombol pintas
 
-| Tombol | Fungsi |
-|---|---|
-| `Esc` | Berhenti |
-| `F9` | Jeda atau lanjut; juga melanjutkan setelah istirahat bab |
-| `F10` / `F11` | Naikkan / turunkan frekuensi typo sebesar 1% |
-| `F8` / `F7` | Naikkan / turunkan kecepatan sebesar 5 WPM |
+| Tombol        | Fungsi                                                   |
+| ------------- | -------------------------------------------------------- |
+| `Esc`         | Berhenti                                                 |
+| `F9`          | Jeda atau lanjut; juga melanjutkan setelah istirahat bab |
+| `F10` / `F11` | Naikkan / turunkan frekuensi typo sebesar 1%             |
+| `F8` / `F7`   | Naikkan / turunkan kecepatan sebesar 5 WPM               |
 
 ## Catatan
 
