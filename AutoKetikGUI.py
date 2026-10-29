@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AutoKetikGUI.py - Entry Point GUI AutoKetik (Modern CustomTkinter GUI).
+AutoKetikGUI.py - Entry Point GUI AutoKetik (Modern PySide6 GUI).
 """
 
 from autoketik import *
