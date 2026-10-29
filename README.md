@@ -8,7 +8,7 @@ AutoKetik adalah skrip Python yang mengambil teks dari file, clipboard, atau Goo
 
 - Python 3.14.4
 - Windows, macOS, atau Linux dengan akses keyboard yang diizinkan untuk aplikasi terminal/Python
-- Paket Python: `pynput`, `requests`, dan `pyperclip`
+- Paket Python: `pynput`, `requests`, `pyperclip`, dan `customtkinter` (untuk GUI)
 
 Instal paket:
 
@@ -16,7 +16,25 @@ Instal paket:
 python -m pip install -r requirements.txt
 ```
 
-## Menjalankan
+## Menjalankan Antarmuka Grafis (GUI)
+
+Anda bisa membuka aplikasi dengan salah satu cara berikut:
+1. **Klik 2x file [`Buka_AutoKetik.bat`](file:///e:/Project/Script/AutoKetik/Buka_AutoKetik.bat)** (Paling cepat dan bersih, tanpa jendela terminal hitam di background).
+2. Atau jalankan via terminal:
+
+```powershell
+python AutoKetikGUI.py
+```
+
+Fitur pada GUI:
+- Pilihan sumber dokumen interaktif (File browser `.txt`/`.html`, Clipboard dengan tombol preview, atau link Google Docs).
+- Penggeser (slider) kecepatan WPM dan simulasi typo real-time dengan preset siap pakai (Santai, Normal, Cepat).
+- Live progress bar dan indikator metrik pengetikan (karakter tersisa, kecepatan WPM aktif, estimasi waktu).
+- Tombol Preview untuk memeriksa hasil parsing dokumen sebelum mulai mengetik.
+- Otomatis minimize jendela GUI saat hitung mundur dimulai agar jendela tujuan langsung aktif.
+- Kontrol keyboard darurat tetap berfungsi penuh (`Esc` berhenti, `F9` pause/lanjut).
+
+## Menjalankan via Terminal (CLI)
 
 Buka terminal di folder proyek, lalu jalankan perintah yang sesuai.
 
@@ -108,3 +126,28 @@ python AutoKetik.py --help
 - Format hanya diterapkan saat sumber dibaca sebagai HTML dan opsi `--no-format` tidak digunakan. Hasil format dapat bergantung pada bahasa dan konfigurasi Google Docs.
 - Pada macOS, skrip memilih tombol pintas Command secara otomatis. Opsi `--mac` tersedia untuk mengaktifkannya secara manual.
 - Jika sistem operasi meminta izin aksesibilitas/keyboard untuk `pynput`, berikan izin tersebut kepada aplikasi terminal atau Python yang menjalankan skrip.
+
+## Struktur Proyek
+
+Proyek ini telah diorganisasi secara modular:
+
+```text
+AutoKetik/
+│
+├── autoketik/                  # Paket Python modular
+│   ├── __init__.py             # Public API & ekspor modul
+│   ├── config.py               # Data class (Config, Block, Run) & konstanta keyboard
+│   ├── parser.py               # Parser HTML Google Docs & fetcher URL
+│   ├── planner.py              # Perencana urutan pengetikan dan formatting
+│   ├── engine.py               # Mesin utama (Typist & GUITypist)
+│   ├── cli.py                  # Antarmuka CLI & argparser
+│   └── gui.py                  # Antarmuka GUI CustomTkinter
+│
+├── AutoKetik.py                # Entry point utama untuk mode CLI
+├── AutoKetikGUI.py             # Entry point utama untuk mode GUI
+├── Buka_AutoKetik.bat          # Launcher Windows 1-klik tanpa terminal hitam
+├── requirements.txt            # Dependensi paket Python
+├── README.md                   # Panduan dokumentasi
+├── LICENSE                     # Lisensi proyek
+└── .gitignore                  # Berkas yang diabaikan Git
+```
