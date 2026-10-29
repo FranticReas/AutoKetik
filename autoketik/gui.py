@@ -1,4 +1,4 @@
-"""
+﻿"""
 autoketik.gui - Antarmuka grafis (GUI) modern berbasis PySide6.
 """
 
@@ -33,57 +33,80 @@ from .engine import GUITypist
 # Stylesheet Tema
 # =============================================================================
 DARK_QSS = """
-QMainWindow, QDialog { background-color: #1e1e2e; }
+QMainWindow, QDialog { background-color: #0f0f1a; }
 QWidget {
-    background-color: #1e1e2e;
-    color: #cdd6f4;
+    color: #e2e8f0;
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 13px;
 }
 QFrame#card {
-    background-color: #181825;
-    border-radius: 8px;
-    border: none;
+    background-color: #1a1a2e;
+    border-radius: 12px;
+    border: 1px solid #2a2a4a;
 }
 QPushButton {
-    background-color: #313244;
-    border-radius: 6px;
-    padding: 6px 14px;
-    border: 1px solid #45475a;
-    color: #cdd6f4;
-    min-height: 26px;
+    background-color: #1e1e3a;
+    border-radius: 9px;
+    padding: 7px 16px;
+    border: 1px solid #3a3a6a;
+    color: #c0c8e0;
+    min-height: 28px;
+    font-weight: 500;
 }
-QPushButton:hover { background-color: #45475a; }
-QPushButton:checked { background-color: #89b4fa; color: #1e1e2e; border-color: #89b4fa; }
-QPushButton:disabled { background-color: #181825; color: #585b70; border-color: #313244; }
+QPushButton:hover {
+    background-color: #2d2d5a;
+    border-color: #7c6aff;
+    color: #ffffff;
+}
+QPushButton:pressed {
+    background-color: #181830;
+    border-color: #5a50dd;
+}
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #6c63ff, stop:1 #9b59ff);
+    color: #ffffff;
+    border-color: #6c63ff;
+    font-weight: 600;
+}
+QPushButton:disabled {
+    background-color: #111125;
+    color: #3a3a55;
+    border-color: #222235;
+}
 QLineEdit {
-    background-color: #313244;
-    border: 1px solid #45475a;
-    border-radius: 6px;
-    padding: 5px 8px;
-    color: #cdd6f4;
+    background-color: #1e1e3a;
+    border: 1px solid #3a3a6a;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #e2e8f0;
 }
-QLineEdit:focus { border-color: #89b4fa; }
+QLineEdit:focus { border-color: #7c6aff; background-color: #22224a; }
 QTextEdit {
-    background-color: #181825;
-    border: 1px solid #313244;
-    border-radius: 6px;
-    color: #cdd6f4;
+    background-color: #1a1a2e;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    color: #e2e8f0;
     font-family: "Consolas", "Courier New", monospace;
     font-size: 12px;
 }
 QSlider::groove:horizontal {
-    background: #313244; height: 6px; border-radius: 3px; border: none;
+    background: #1e1e3a; height: 6px; border-radius: 3px; border: none;
 }
 QSlider::handle:horizontal {
-    background: #89b4fa;
-    width: 14px; height: 14px;
-    border-radius: 7px;
-    margin: -4px 0;
+    background: #a78bfa;
+    width: 16px; height: 16px;
+    border-radius: 8px;
+    margin: -5px 0;
+    border: 2px solid #4c35a0;
 }
-QSlider::sub-page:horizontal { background: #89b4fa; border-radius: 3px; }
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #6c63ff, stop:1 #a78bfa);
+    border-radius: 3px;
+}
 QProgressBar {
-    background: #313244;
+    background: #1e1e3a;
     border-radius: 5px;
     border: none;
     text-align: center;
@@ -91,105 +114,165 @@ QProgressBar {
     max-height: 10px;
     min-height: 10px;
 }
-QProgressBar::chunk { background: #89b4fa; border-radius: 5px; }
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #6c63ff, stop:1 #a78bfa);
+    border-radius: 5px;
+}
 QComboBox {
-    background-color: #313244;
-    border: 1px solid #45475a;
-    border-radius: 6px;
-    padding: 4px 8px;
-    color: #cdd6f4;
+    background-color: #1e1e3a;
+    border: 1px solid #3a3a6a;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #e2e8f0;
+    min-height: 28px;
 }
-QComboBox::drop-down { border: none; padding-right: 8px; }
+QComboBox:hover { border-color: #7c6aff; }
+QComboBox::drop-down { border: none; padding-right: 10px; }
 QComboBox QAbstractItemView {
-    background-color: #1e1e2e;
-    border: 1px solid #45475a;
-    selection-background-color: #45475a;
-    color: #cdd6f4;
+    background-color: #1a1a2e;
+    border: 1px solid #3a3a6a;
+    selection-background-color: #2d2d5a;
+    color: #e2e8f0;
     outline: none;
+    border-radius: 6px;
 }
-QCheckBox { spacing: 6px; }
+QCheckBox { spacing: 8px; }
 QCheckBox::indicator {
-    width: 16px; height: 16px;
-    border-radius: 4px;
-    border: 2px solid #585b70;
-    background: #313244;
+    width: 18px; height: 18px;
+    border-radius: 5px;
+    border: 2px solid #3a3a6a;
+    background: #1e1e3a;
 }
-QCheckBox::indicator:checked { background: #89b4fa; border-color: #89b4fa; }
-QScrollBar:vertical { background: #1e1e2e; width: 8px; border-radius: 4px; }
-QScrollBar::handle:vertical { background: #45475a; border-radius: 4px; min-height: 20px; }
+QCheckBox::indicator:hover { border-color: #7c6aff; }
+QCheckBox::indicator:checked {
+    background: #6c63ff;
+    border-color: #6c63ff;
+}
+QScrollBar:vertical { background: #0f0f1a; width: 8px; border-radius: 4px; }
+QScrollBar::handle:vertical {
+    background: #3a3a6a;
+    border-radius: 4px; min-height: 20px;
+}
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
 """
 
+
 LIGHT_QSS = """
-QMainWindow, QDialog { background-color: #eff1f5; }
+QMainWindow, QDialog { background-color: #f0f2ff; }
 QWidget {
-    background-color: #eff1f5;
-    color: #4c4f69;
+    color: #2d2d5e;
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 13px;
 }
-QFrame#card { background-color: #dce0e8; border-radius: 8px; border: none; }
+QFrame#card {
+    background-color: #e4e8ff;
+    border-radius: 12px;
+    border: 1px solid #c8cef5;
+}
 QPushButton {
-    background-color: #ccd0da; border-radius: 6px; padding: 6px 14px;
-    border: 1px solid #bcc0cc; color: #4c4f69; min-height: 26px;
+    background-color: #dde1f8;
+    border-radius: 9px;
+    padding: 7px 16px;
+    border: 1px solid #b8c0ea;
+    color: #3d3d7a;
+    min-height: 28px;
+    font-weight: 500;
 }
-QPushButton:hover { background-color: #bcc0cc; }
-QPushButton:checked { background-color: #1e66f5; color: #eff1f5; border-color: #1e66f5; }
-QPushButton:disabled { background-color: #eff1f5; color: #9ca0b0; border-color: #ccd0da; }
+QPushButton:hover {
+    background-color: #c8cff5;
+    border-color: #6c63ff;
+    color: #2d2d5e;
+}
+QPushButton:pressed { background-color: #b8bfed; border-color: #5a50dd; }
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #6c63ff, stop:1 #9b59ff);
+    color: #ffffff;
+    border-color: #6c63ff;
+    font-weight: 600;
+}
+QPushButton:disabled {
+    background-color: #f0f2ff;
+    color: #9090b0;
+    border-color: #d0d4f0;
+}
 QLineEdit {
-    background-color: #dce0e8; border: 1px solid #bcc0cc; border-radius: 6px;
-    padding: 5px 8px; color: #4c4f69;
+    background-color: #e4e8ff; border: 1px solid #b8c0ea; border-radius: 8px;
+    padding: 5px 10px; color: #2d2d5e;
 }
-QLineEdit:focus { border-color: #1e66f5; }
+QLineEdit:focus { border-color: #6c63ff; background-color: #dde1f8; }
 QTextEdit {
-    background-color: #dce0e8; border: 1px solid #bcc0cc; border-radius: 6px;
-    color: #4c4f69; font-family: "Consolas", monospace; font-size: 12px;
+    background-color: #e4e8ff; border: 1px solid #b8c0ea; border-radius: 8px;
+    color: #2d2d5e; font-family: "Consolas", monospace; font-size: 12px;
 }
-QSlider::groove:horizontal { background: #bcc0cc; height: 6px; border-radius: 3px; }
+QSlider::groove:horizontal { background: #c8cff5; height: 6px; border-radius: 3px; }
 QSlider::handle:horizontal {
-    background: #1e66f5; width: 14px; height: 14px; border-radius: 7px; margin: -4px 0;
+    background: #6c63ff; width: 16px; height: 16px; border-radius: 8px; margin: -5px 0;
+    border: 2px solid #4c45cc;
 }
-QSlider::sub-page:horizontal { background: #1e66f5; border-radius: 3px; }
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #6c63ff, stop:1 #9b8aff);
+    border-radius: 3px;
+}
 QProgressBar {
-    background: #bcc0cc; border-radius: 5px; border: none;
+    background: #c8cff5; border-radius: 5px; border: none;
     text-align: center; color: transparent; max-height: 10px; min-height: 10px;
 }
-QProgressBar::chunk { background: #1e66f5; border-radius: 5px; }
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #6c63ff, stop:1 #9b8aff);
+    border-radius: 5px;
+}
 QComboBox {
-    background-color: #dce0e8; border: 1px solid #bcc0cc; border-radius: 6px;
-    padding: 4px 8px; color: #4c4f69;
+    background-color: #dde1f8; border: 1px solid #b8c0ea; border-radius: 8px;
+    padding: 5px 10px; color: #2d2d5e; min-height: 28px;
 }
-QComboBox::drop-down { border: none; padding-right: 8px; }
+QComboBox:hover { border-color: #6c63ff; }
+QComboBox::drop-down { border: none; padding-right: 10px; }
 QComboBox QAbstractItemView {
-    background-color: #eff1f5; selection-background-color: #bcc0cc; color: #4c4f69;
+    background-color: #f0f2ff; selection-background-color: #c8cff5; color: #2d2d5e;
 }
-QCheckBox { spacing: 6px; }
+QCheckBox { spacing: 8px; }
 QCheckBox::indicator {
-    width: 16px; height: 16px; border-radius: 4px;
-    border: 2px solid #9ca0b0; background: #dce0e8;
+    width: 18px; height: 18px; border-radius: 5px;
+    border: 2px solid #9090b0; background: #dde1f8;
 }
-QCheckBox::indicator:checked { background: #1e66f5; border-color: #1e66f5; }
-QScrollBar:vertical { background: #eff1f5; width: 8px; border-radius: 4px; }
-QScrollBar::handle:vertical { background: #bcc0cc; border-radius: 4px; min-height: 20px; }
+QCheckBox::indicator:hover { border-color: #6c63ff; }
+QCheckBox::indicator:checked { background: #6c63ff; border-color: #6c63ff; }
+QScrollBar:vertical { background: #f0f2ff; width: 8px; border-radius: 4px; }
+QScrollBar::handle:vertical { background: #b8c0ea; border-radius: 4px; min-height: 20px; }
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
 """
+
 
 
 # =============================================================================
 # Widget Kustom: SegmentedButton (pengganti CTkSegmentedButton)
 # =============================================================================
 class SegmentedButton(QWidget):
-    """Tombol pilihan eksklusif bergaya segmented — pengganti CTkSegmentedButton."""
+    """Tombol pilihan eksklusif bergaya segmented -- modern pill style."""
     valueChanged = Signal(str)
 
-    def __init__(self, values: list[str], parent=None, height: int = 32, bold: bool = True):
+    def __init__(self, values: list[str], parent=None, height: int = 34, bold: bool = True):
         super().__init__(parent)
         self._values = values
         self._current = values[0] if values else ""
 
         layout = QHBoxLayout(self)
-        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setContentsMargins(3, 3, 3, 3)
         layout.setSpacing(2)
+
+        # Wrapper frame sebagai "pill container"
+        self.setObjectName("segContainer")
+        self.setStyleSheet(
+            "QWidget#segContainer {"
+            "  background-color: #12122a;"
+            "  border-radius: 11px;"
+            "  border: 1px solid #3a3a6a;"
+            "}"
+        )
 
         self._buttons: dict[str, QPushButton] = {}
         self._group = QButtonGroup(self)
@@ -204,6 +287,26 @@ class SegmentedButton(QWidget):
                 f = btn.font()
                 f.setBold(True)
                 btn.setFont(f)
+            btn.setStyleSheet(
+                "QPushButton {"
+                "  background: transparent;"
+                "  border: none;"
+                "  border-radius: 8px;"
+                "  color: #7070a0;"
+                "  font-size: 12px;"
+                "  padding: 4px 12px;"
+                "}"
+                "QPushButton:hover {"
+                "  background: rgba(108,99,255,0.15);"
+                "  color: #c0b8ff;"
+                "}"
+                "QPushButton:checked {"
+                "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+                "    stop:0 #6c63ff, stop:1 #9b59ff);"
+                "  color: #ffffff;"
+                "  font-weight: 700;"
+                "}"
+            )
             self._group.addButton(btn)
             layout.addWidget(btn)
             self._buttons[v] = btn
@@ -339,7 +442,13 @@ class AutoKetikApp(QMainWindow):
 
         h_lay.addWidget(QLabel("Tema:"))
         self.theme_combo = QComboBox()
-        self.theme_combo.addItems(["Dark", "Light", "System"])
+        self.theme_combo.addItems(["Dark", "Light"])
+        for i in range(self.theme_combo.count()):
+            self.theme_combo.setItemData(
+            i,
+            Qt.AlignmentFlag.AlignCenter,
+            Qt.ItemDataRole.TextAlignmentRole,
+        )
         self.theme_combo.setFixedWidth(90)
         self.theme_combo.currentTextChanged.connect(self._apply_theme)
         h_lay.addWidget(self.theme_combo)
@@ -856,58 +965,103 @@ class AutoKetikApp(QMainWindow):
         b_lay.setContentsMargins(0, 0, 0, 0)
         b_lay.setSpacing(4)
 
-        self.btn_start = QPushButton("▶ Mulai Mengetik")
+        self.btn_start = QPushButton("\u25b6  Mulai Mengetik")
         _bold(self.btn_start, 12)
-        self.btn_start.setFixedHeight(36)
+        self.btn_start.setFixedHeight(40)
         self.btn_start.setStyleSheet(
-            "QPushButton{background:#27ae60;border-color:#27ae60;color:white;border-radius:6px;}"
-            "QPushButton:hover{background:#219955;}"
-            "QPushButton:disabled{background:#444;color:#888;border-color:#333;}"
+            "QPushButton{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #22c55e, stop:1 #16a34a);"
+            "  border: none; border-radius: 10px;"
+            "  color: #ffffff; font-size: 13px; font-weight: 700;"
+            "  padding: 0 20px;"
+            "}"
+            "QPushButton:hover{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #4ade80, stop:1 #22c55e);"
+            "}"
+            "QPushButton:pressed{ background: #15803d; }"
+            "QPushButton:disabled{ background: #808080; color: #d0d0d0; border: 1px solid #707070; }"
         )
         self.btn_start.clicked.connect(lambda: self.start_typing(simulate_only=False))
         b_lay.addWidget(self.btn_start, stretch=1)
 
-        self.btn_sim_only = QPushButton("🧪 Tes Simulasi di Layar")
+        self.btn_sim_only = QPushButton("\U0001f9ea  Tes Simulasi di Layar")
         _bold(self.btn_sim_only)
-        self.btn_sim_only.setFixedHeight(36)
+        self.btn_sim_only.setFixedHeight(40)
         self.btn_sim_only.setStyleSheet(
-            "QPushButton{background:#8e44ad;border-color:#8e44ad;color:white;border-radius:6px;}"
-            "QPushButton:hover{background:#7d3c98;}"
-            "QPushButton:disabled{background:#444;color:#888;border-color:#333;}"
+            "QPushButton{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #7c3aed, stop:1 #a855f7);"
+            "  border: none; border-radius: 10px;"
+            "  color: #ffffff; font-weight: 600;"
+            "  padding: 0 16px;"
+            "}"
+            "QPushButton:hover{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #9f5af7, stop:1 #c084fc);"
+            "}"
+            "QPushButton:pressed{ background: #5b21b6; }"
+            "QPushButton:disabled{ background: #808080; color: #d0d0d0; border: 1px solid #707070; }"
         )
         self.btn_sim_only.clicked.connect(lambda: self.start_typing(simulate_only=True))
         b_lay.addWidget(self.btn_sim_only)
 
-        self.btn_pause = QPushButton("⏸ Pause (F9)")
-        self.btn_pause.setFixedHeight(36)
-        self.btn_pause.setFixedWidth(112)
+        self.btn_pause = QPushButton("\u23f8  Pause (F9)")
+        self.btn_pause.setFixedHeight(40)
         self.btn_pause.setStyleSheet(
-            "QPushButton{background:#d35400;border-color:#d35400;color:white;border-radius:6px;}"
-            "QPushButton:hover{background:#ba4a00;}"
-            "QPushButton:disabled{background:#444;color:#888;border-color:#333;}"
+            "QPushButton{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #f97316, stop:1 #ea580c);"
+            "  border: none; border-radius: 10px;"
+            "  color: #ffffff; font-weight: 600;"
+            "}"
+            "QPushButton:hover{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #fb923c, stop:1 #f97316);"
+            "}"
+            "QPushButton:pressed{ background: #c2410c; }"
+            "QPushButton:disabled{ background: #808080; color: #d0d0d0; border: 1px solid #707070; }"
         )
         self.btn_pause.setEnabled(False)
         self.btn_pause.clicked.connect(self.toggle_pause)
         b_lay.addWidget(self.btn_pause)
 
-        self.btn_stop = QPushButton("⏹ Berhenti (ESC)")
-        self.btn_stop.setFixedHeight(36)
-        self.btn_stop.setFixedWidth(125)
+        self.btn_stop = QPushButton("\u23f9  Berhenti (ESC)")
+        self.btn_stop.setFixedHeight(40)
         self.btn_stop.setStyleSheet(
-            "QPushButton{background:#c0392b;border-color:#c0392b;color:white;border-radius:6px;}"
-            "QPushButton:hover{background:#a93226;}"
-            "QPushButton:disabled{background:#444;color:#888;border-color:#333;}"
+            "QPushButton{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #ef4444, stop:1 #dc2626);"
+            "  border: none; border-radius: 10px;"
+            "  color: #ffffff; font-weight: 600;"
+            "}"
+            "QPushButton:hover{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #f87171, stop:1 #ef4444);"
+            "}"
+            "QPushButton:pressed{ background: #b91c1c; }"
+            "QPushButton:disabled{ background: #808080; color: #d0d0d0; border: 1px solid #707070; }"
         )
         self.btn_stop.setEnabled(False)
         self.btn_stop.clicked.connect(self.stop_typing)
         b_lay.addWidget(self.btn_stop)
 
-        self.btn_preview = QPushButton("🔍 Rincian Format")
-        self.btn_preview.setFixedHeight(36)
-        self.btn_preview.setFixedWidth(120)
+        self.btn_preview = QPushButton("\U0001f50d  Rincian Format")
+        self.btn_preview.setFixedHeight(40)
         self.btn_preview.setStyleSheet(
-            "QPushButton{background:#2980b9;border-color:#2980b9;color:white;border-radius:6px;}"
-            "QPushButton:hover{background:#2471a3;}"
+            "QPushButton{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #3b82f6, stop:1 #2563eb);"
+            "  border: none; border-radius: 10px;"
+            "  color: #ffffff; font-weight: 600;"
+            "}"
+            "QPushButton:hover{"
+            "  background: qlineargradient(x1:0,y1:0,x2:1,y2:0,"
+            "    stop:0 #60a5fa, stop:1 #3b82f6);"
+            "}"
+            "QPushButton:pressed{ background: #1d4ed8; }"
+            "QPushButton:disabled{ background: #808080; color: #d0d0d0; border: 1px solid #707070; }"
         )
         self.btn_preview.clicked.connect(self.open_preview_window)
         b_lay.addWidget(self.btn_preview)
@@ -1175,7 +1329,7 @@ class AutoKetikApp(QMainWindow):
         self.btn_start.setEnabled(False)
         self.btn_sim_only.setEnabled(False)
         self.btn_pause.setEnabled(True)
-        self.btn_pause.setText("⏸ Pause (F9)")
+        self.btn_pause.setText("⏸  Pause (F9)")
         self.btn_stop.setEnabled(True)
         self.btn_preview.setEnabled(False)
         self.progress_bar.setValue(0)
@@ -1332,7 +1486,7 @@ class AutoKetikApp(QMainWindow):
         self.btn_start.setEnabled(True)
         self.btn_sim_only.setEnabled(True)
         self.btn_pause.setEnabled(False)
-        self.btn_pause.setText("⏸ Pause (F9)")
+        self.btn_pause.setText("⏸  Pause (F9)")
         self.btn_stop.setEnabled(False)
         self.btn_preview.setEnabled(True)
 
@@ -1353,13 +1507,13 @@ class AutoKetikApp(QMainWindow):
             return
         if self.typist.paused.is_set():
             self.typist.paused.clear()
-            self.btn_pause.setText("⏸ Pause (F9)")
+            self.btn_pause.setText("⏸  Pause (F9)")
             self._set_status_text("Melanjutkan pengetikan...")
             self.lbl_sim_status.setText("● Sedang Mengetik...")
             self.lbl_sim_status.setStyleSheet("color: #f39c12; font-size: 11px; font-weight: bold;")
         else:
             self.typist.paused.set()
-            self.btn_pause.setText("▶ Lanjut (F9)")
+            self.btn_pause.setText("▶  Lanjut (F9)")
             self._set_status_text("Dijeda. Tekan F9 atau klik Lanjut.")
             self.lbl_sim_status.setText("● Dijeda")
             self.lbl_sim_status.setStyleSheet("color: #e67e22; font-size: 11px; font-weight: bold;")
@@ -1387,12 +1541,12 @@ class AutoKetikApp(QMainWindow):
                 if self.typist.paused.is_set():
                     self.typist.paused.clear()
                     self._sigs.status_changed.emit("Melanjutkan pengetikan...")
-                    self._sigs.pause_btn_text.emit("⏸ Pause (F9)")
+                    self._sigs.pause_btn_text.emit("⏸  Pause (F9)")
                     self._sigs.sim_status_changed.emit("● Sedang Mengetik...", "#f39c12")
                 else:
                     self.typist.paused.set()
                     self._sigs.status_changed.emit("Dijeda. Tekan F9 untuk lanjut.")
-                    self._sigs.pause_btn_text.emit("▶ Lanjut (F9)")
+                    self._sigs.pause_btn_text.emit("▶  Lanjut (F9)")
                     self._sigs.sim_status_changed.emit("● Dijeda", "#e67e22")
             elif key == Key.f10:
                 self.typist.typo_adj += 0.01
