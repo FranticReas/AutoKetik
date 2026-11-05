@@ -200,6 +200,11 @@ class Typist:
 
         return valid_rem[:cutoff]
 
+    @staticmethod
+    def keep_typed_tail(tail: str) -> bool:
+        """Pertahankan teks setelah typo jika bagian yang sudah diketik cukup panjang."""
+        return len(tail) >= 24 or len(re.findall(r"\S+", tail)) >= 3
+
     # ---- mengetik teks ---------------------------------------------------
 
     def type_text(self, text: str):
@@ -232,10 +237,20 @@ class Typist:
 
                 # Jeda sadar ada typo sebelum membenarkan
                 self.sleep(random.uniform(*cfg.notice_pause))
-                # Hapus kembali kata-kata dan typo sampai posisi kesalahan
-                self.backspace(len(wrong) + len(tail))
+                # Jika ekor yang sudah diketik panjang, koreksi typo saja.
+                # Ekor tetap di layar sehingga jangan mengetikkannya lagi.
+                keep_tail = self.keep_typed_tail(tail)
+                self.backspace(len(wrong) + (0 if keep_tail else len(tail)))
                 # Jeda sejenak sebelum mulai mengetik yang benar
                 self.sleep(random.uniform(0.15, 0.35))
+                if keep_tail:
+                    p = self.prev
+                    for c in text[i : i + consumed]:
+                        self.sleep(self.char_delay(p, c))
+                        self.type_char(c)
+                        p = c
+                    i += consumed + len(tail)
+                    continue
                 no_typo_at = i
                 continue
 
@@ -398,10 +413,20 @@ class GUITypist(Typist):
 
                 # Jeda sadar ada typo sebelum membenarkan
                 self.sleep(random.uniform(*cfg.notice_pause))
-                # Hapus kembali kata-kata dan typo sampai posisi kesalahan
-                self.backspace(len(wrong) + len(tail))
+                # Jika ekor yang sudah diketik panjang, koreksi typo saja.
+                # Ekor tetap di layar sehingga jangan mengetikkannya lagi.
+                keep_tail = self.keep_typed_tail(tail)
+                self.backspace(len(wrong) + (0 if keep_tail else len(tail)))
                 # Jeda sejenak sebelum mulai mengetik yang benar
                 self.sleep(random.uniform(0.15, 0.35))
+                if keep_tail:
+                    p = self.prev
+                    for c in text[i : i + consumed]:
+                        self.sleep(self.char_delay(p, c))
+                        self.type_char(c)
+                        p = c
+                    i += consumed + len(tail)
+                    continue
                 no_typo_at = i
                 continue
 

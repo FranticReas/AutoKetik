@@ -1,68 +1,127 @@
 {
   "AutoKetik.py": {
     "mtime": 1792993114.6946952,
-    "seen": 1793264317.0526817,
     "ast_hash": "1c2c2162b716b302b7470f3e824a99ba",
     "semantic_hash": "1c2c2162b716b302b7470f3e824a99ba"
   },
   "AutoKetikGUI.py": {
-    "mtime": 1793261167.9473803,
-    "seen": 1793264317.0526817,
+    "mtime": 1793266742.0476384,
     "ast_hash": "e4a9bd810f61e12dc41e87183c12ca46",
     "semantic_hash": "e4a9bd810f61e12dc41e87183c12ca46"
   },
   "autoketik/__init__.py": {
     "mtime": 1792993108.110454,
-    "seen": 1793264317.0526817,
     "ast_hash": "f7311b38e7a822df9f7038b457c8fe12",
     "semantic_hash": "f7311b38e7a822df9f7038b457c8fe12"
   },
   "autoketik/cli.py": {
     "mtime": 1792993002.5121021,
-    "seen": 1793264317.0526817,
     "ast_hash": "7562a500038af20e4b08aa7466ccf39d",
     "semantic_hash": "7562a500038af20e4b08aa7466ccf39d"
   },
   "autoketik/config.py": {
     "mtime": 1792992902.600178,
-    "seen": 1793264317.0526817,
     "ast_hash": "5c459b95a1e60621378d39dc6945f010",
     "semantic_hash": "5c459b95a1e60621378d39dc6945f010"
   },
   "autoketik/engine.py": {
-    "mtime": 1792992979.6004708,
-    "seen": 1793264317.0526817,
-    "ast_hash": "0d0c62f5d049a664a4781ef0631eea28",
-    "semantic_hash": "0d0c62f5d049a664a4781ef0631eea28"
+    "mtime": 1793861608.9295266,
+    "ast_hash": "37d932c02ca6978b295b4b0f21588656",
+    "semantic_hash": ""
   },
   "autoketik/gui.py": {
-    "mtime": 1793263391.800748,
-    "seen": 1793264317.0526817,
-    "ast_hash": "875ee54b7a9026f584c7ac4da55e3338",
-    "semantic_hash": "875ee54b7a9026f584c7ac4da55e3338"
+    "mtime": 1793862380.4468017,
+    "ast_hash": "ded9a1b1359645b229724a0ce071eefd",
+    "semantic_hash": ""
   },
   "autoketik/parser.py": {
     "mtime": 1792992936.0569453,
-    "seen": 1793264317.0526817,
     "ast_hash": "de8aa24c2d5ec9eb9cfc5d7bf9445b27",
     "semantic_hash": "de8aa24c2d5ec9eb9cfc5d7bf9445b27"
   },
   "autoketik/planner.py": {
     "mtime": 1792992947.9508936,
-    "seen": 1793264317.0526817,
     "ast_hash": "056ceb3e6098ac99621a7f07f87cb99f",
     "semantic_hash": "056ceb3e6098ac99621a7f07f87cb99f"
   },
   "README.md": {
-    "mtime": 1793262065.1763911,
-    "seen": 1793264317.0526817,
-    "ast_hash": "2dfdf1cf1e6f10935f50d7ecc668ca8f",
-    "semantic_hash": "2dfdf1cf1e6f10935f50d7ecc668ca8f"
+    "mtime": 1793266742.049155,
+    "ast_hash": "080b9cc46390fda9206d96c54390da67",
+    "semantic_hash": ""
   },
   "requirements.txt": {
-    "mtime": 1793261167.9534705,
-    "seen": 1793264317.0526817,
+    "mtime": 1793266742.2322936,
     "ast_hash": "ae60183b8bc046d8a2bb1d6f5fe1dc2a",
     "semantic_hash": "ae60183b8bc046d8a2bb1d6f5fe1dc2a"
+  },
+  ".codex/hooks.json": {
+    "mtime": 1793266742.0155628,
+    "ast_hash": "7e74c9f461ca6ae114521a4442cf99c8",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1793266742.0124013,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1793266742.0134575,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/SKILL.md": {
+    "mtime": 1793266742.018255,
+    "ast_hash": "3ea885b8b7da6151fc4d75f517b2a331",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/add-watch.md": {
+    "mtime": 1793266742.018255,
+    "ast_hash": "58c888b5ec0689a886543dd765c1acc9",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/exports.md": {
+    "mtime": 1793266742.020395,
+    "ast_hash": "ecc0c36852fee4ba6280cdf2b9149039",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1793266742.020915,
+    "ast_hash": "e342f30a5acd60c87ff8ce02a1b62644",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1793266742.0379567,
+    "ast_hash": "aa0e7ef186392cad062e60483ca7dbbf",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/hooks.md": {
+    "mtime": 1793266742.0400102,
+    "ast_hash": "0045c2f12c69bff3a641a8908a1ac057",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/query.md": {
+    "mtime": 1793266742.0405333,
+    "ast_hash": "0796228c127ce6cd13ac048bf2fb234e",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/transcribe.md": {
+    "mtime": 1793266742.0420563,
+    "ast_hash": "5c6a9af05d12b5797b2fa8b9493dcc37",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/update.md": {
+    "mtime": 1793266742.0435941,
+    "ast_hash": "01c78ea9438925c605b58a2eecbbcf5b",
+    "semantic_hash": ""
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1793266196.806859,
+    "ast_hash": "2b23503628bf2ec71d067a85ca8948ab",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1793266742.0461142,
+    "ast_hash": "752aa83aa64361ac32860f882dcff932",
+    "semantic_hash": ""
   }
 }
