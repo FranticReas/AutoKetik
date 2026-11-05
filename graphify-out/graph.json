@@ -494,14 +494,14 @@
       "norm_label": "autoketik.engine - mesin pengetikan utama (typist) dan varian gui (guitypist)."
     },
     {
-      "label": "Simulasi pengetikan ala manusia dengan kecepatan bergelombang,     jeda berpikir",
+      "label": "Simulasi pengetikan ala manusia dengan kecepatan bergelombang,     jeda berpiki",
       "file_type": "rationale",
       "source_file": "autoketik/engine.py",
       "source_location": "L19",
       "_origin": "ast",
       "id": "autoketik_engine_rationale_19",
       "community": 1,
-      "norm_label": "simulasi pengetikan ala manusia dengan kecepatan bergelombang,     jeda berpikir"
+      "norm_label": "simulasi pengetikan ala manusia dengan kecepatan bergelombang,     jeda berpiki"
     },
     {
       "label": "0..1. 1 = paling cepat, 0 = paling lambat. Halus (cosinus).",
@@ -6668,9 +6668,9 @@
       "source_file": "autoketik/gui.py",
       "source_location": "L900",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "autoketik_gui_rationale_900",
-      "target": "autoketik_gui_autoketikapp_bulk_set_wpm_typo",
-      "confidence_score": 1.0
+      "target": "autoketik_gui_autoketikapp_bulk_set_wpm_typo"
     },
     {
       "relation": "calls",
@@ -7053,9 +7053,9 @@
       "source_file": "autoketik/gui.py",
       "source_location": "L1711",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "autoketik_gui_rationale_1711",
-      "target": "autoketik_gui_bold",
-      "confidence_score": 1.0
+      "target": "autoketik_gui_bold"
     },
     {
       "relation": "contains",
@@ -8278,5 +8278,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "89cb2667d16fb80214c34587073a20d1648d594f"
+  "built_at_commit": "86c88623fdc5fac8c7baac1e7d19bd85b3d16e2f"
 }

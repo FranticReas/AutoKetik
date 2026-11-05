@@ -1,7 +1,7 @@
 # Graph Report - AutoKetik  (2026-11-05)
 
 ## Corpus Check
-- 24 files · ~19,867 words
+- 24 files · ~19,868 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `89cb2667`
+- Built from commit: `86c88623`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -73,7 +73,7 @@ Nodes (13): AutoKetikApp, _bold(), Shortcut set font bold (+ukuran opsional) ke 
 
 ### Community 1 - "Community 1"
 Cohesion: 0.15
-Nodes (8): GUITypist, 0..1. 1 = paling cepat, 0 = paling lambat. Halus (cosinus)., Variasi acak kecil antar kata (momentum), di atas gelombang WPM., Pilih sisa teks (beberapa kata) yang terus diketik sebelum sadar ada typo., Simulasi pengetikan ala manusia dengan kecepatan bergelombang,     jeda berpikir, Pertahankan teks setelah typo jika bagian yang sudah diketik cukup panjang., Subclass Typist dengan hook progress, status, dan animasi pengetikan real-time u, Typist
+Nodes (8): GUITypist, 0..1. 1 = paling cepat, 0 = paling lambat. Halus (cosinus)., Variasi acak kecil antar kata (momentum), di atas gelombang WPM., Pilih sisa teks (beberapa kata) yang terus diketik sebelum sadar ada typo., Simulasi pengetikan ala manusia dengan kecepatan bergelombang,     jeda berpiki, Pertahankan teks setelah typo jika bagian yang sudah diketik cukup panjang., Subclass Typist dengan hook progress, status, dan animasi pengetikan real-time u, Typist
 
 ### Community 2 - "Community 2"
 Cohesion: 0.21
