@@ -8,7 +8,7 @@ AutoKetik adalah skrip Python yang mengambil teks dari file, clipboard, atau Goo
 
 - Python 3.14.4
 - Windows, macOS, atau Linux dengan akses keyboard yang diizinkan untuk aplikasi terminal/Python
-- Paket Python: `pynput`, `requests`, `pyperclip`, dan `customtkinter` (untuk GUI)
+- Paket Python: `pynput`, `requests`, `pyperclip`, dan `PySide6` (untuk GUI)
 
 Instal paket:
 
@@ -141,7 +141,7 @@ AutoKetik/
 │   ├── planner.py              # Perencana urutan pengetikan dan formatting
 │   ├── engine.py               # Mesin utama (Typist & GUITypist)
 │   ├── cli.py                  # Antarmuka CLI & argparser
-│   └── gui.py                  # Antarmuka GUI CustomTkinter
+│   └── gui.py                  # Antarmuka GUI PySide6
 │
 ├── AutoKetik.py                # Entry point utama untuk mode CLI
 ├── AutoKetikGUI.py             # Entry point utama untuk mode GUI

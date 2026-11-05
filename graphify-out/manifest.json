@@ -25,12 +25,12 @@
     "semantic_hash": "5c459b95a1e60621378d39dc6945f010"
   },
   "autoketik/engine.py": {
-    "mtime": 1793861608.9295266,
-    "ast_hash": "37d932c02ca6978b295b4b0f21588656",
+    "mtime": 1793862748.4170392,
+    "ast_hash": "67e7a62025a71cf2ccdc4f0e3ca63458",
     "semantic_hash": ""
   },
   "autoketik/gui.py": {
-    "mtime": 1793862380.4468017,
+    "mtime": 1793862748.4180815,
     "ast_hash": "ded9a1b1359645b229724a0ce071eefd",
     "semantic_hash": ""
   },
@@ -45,14 +45,14 @@
     "semantic_hash": "056ceb3e6098ac99621a7f07f87cb99f"
   },
   "README.md": {
-    "mtime": 1793266742.049155,
-    "ast_hash": "080b9cc46390fda9206d96c54390da67",
+    "mtime": 1793866999.0178442,
+    "ast_hash": "4410bfef617bc337c91cf29700477f56",
     "semantic_hash": ""
   },
   "requirements.txt": {
-    "mtime": 1793266742.2322936,
-    "ast_hash": "ae60183b8bc046d8a2bb1d6f5fe1dc2a",
-    "semantic_hash": "ae60183b8bc046d8a2bb1d6f5fe1dc2a"
+    "mtime": 1793866953.8641877,
+    "ast_hash": "e9f29296ea5d5db6047f8d08a84a602b",
+    "semantic_hash": ""
   },
   ".codex/hooks.json": {
     "mtime": 1793266742.0155628,
@@ -115,7 +115,7 @@
     "semantic_hash": ""
   },
   ".github/copilot-instructions.md": {
-    "mtime": 1793266196.806859,
+    "mtime": 1793862748.415526,
     "ast_hash": "2b23503628bf2ec71d067a85ca8948ab",
     "semantic_hash": ""
   },
