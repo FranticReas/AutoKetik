@@ -12,7 +12,7 @@ try:
         QApplication, QMainWindow, QWidget, QFrame, QLabel, QPushButton,
         QLineEdit, QTextEdit, QSlider, QProgressBar, QCheckBox, QComboBox,
         QHBoxLayout, QVBoxLayout, QSizePolicy, QFileDialog,
-        QMessageBox, QDialog, QButtonGroup, QStackedWidget,
+        QMessageBox, QDialog, QButtonGroup, QStackedWidget, QToolButton, QMenu,
     )
     from PySide6.QtCore import Qt, QTimer, Signal, QObject, Slot
     from PySide6.QtGui import QFont, QTextCursor
@@ -750,13 +750,11 @@ class AutoKetikApp(QMainWindow):
         td_lay.setContentsMargins(0, 2, 0, 2)
         td_lay.setSpacing(8)
         td_lay.addWidget(QLabel("Kata sebelum sadar:"))
-        self.entry_typo_words = QLineEdit("1-3")
-        self.entry_typo_words.setFixedWidth(55)
-        td_lay.addWidget(self.entry_typo_words)
+        self.entry_typo_words, self.typo_words_fields = self._make_range_input("1", "3", 42)
+        td_lay.addWidget(self.entry_typo_words, 1)
         td_lay.addWidget(QLabel("Jeda sadar (detik):"))
-        self.entry_typo_delay = QLineEdit("0.8-2.0")
-        self.entry_typo_delay.setFixedWidth(65)
-        td_lay.addWidget(self.entry_typo_delay)
+        self.entry_typo_delay, self.typo_delay_fields = self._make_range_input("0.8", "2.0", 48)
+        td_lay.addWidget(self.entry_typo_delay, 1)
         td_lay.addStretch()
         typo_lay.addWidget(t_det)
         lay.addWidget(typo_grp)
@@ -792,6 +790,53 @@ class AutoKetikApp(QMainWindow):
         setattr(self, lbl_attr, val_lbl)
         setattr(self, slider_attr, slider)
         return row
+
+    @staticmethod
+    def _make_range_input(minimum, maximum, width):
+        """Create numeric fields with a readable menu for constant or random mode."""
+        box = QWidget()
+        row = QHBoxLayout(box)
+        row.setContentsMargins(0, 0, 0, 0)
+        row.setSpacing(3)
+        low = QLineEdit(minimum)
+        high = QLineEdit(maximum)
+        low.setMinimumWidth(width)
+        high.setMinimumWidth(width)
+        low.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        high.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        low.setPlaceholderText("Nilai")
+        high.setPlaceholderText("Maks")
+        row.addWidget(low, 1)
+        row.addWidget(high, 1)
+        button = QToolButton()
+        button.setText("▾")
+        button.setFixedWidth(25)
+        menu = QMenu(button)
+        constant = menu.addAction("Konstan")
+        random_range = menu.addAction("Acak antara dua nilai konstan")
+        button.setMenu(menu)
+        button.setPopupMode(QToolButton.InstantPopup)
+        state = {"random": True}
+
+        def set_mode(random_mode):
+            state["random"] = random_mode
+            high.setVisible(random_mode)
+            low.setPlaceholderText("Min" if random_mode else "Nilai")
+            button.setToolTip("Acak antara dua nilai konstan" if random_mode else "Konstan")
+
+        constant.triggered.connect(lambda: set_mode(False))
+        random_range.triggered.connect(lambda: set_mode(True))
+        set_mode(True)
+        row.addWidget(button)
+        return box, {"minimum": low, "maximum": high, "state": state}
+
+    @staticmethod
+    def _read_mode_range(fields, cast):
+        low = cast(fields["minimum"].text())
+        if not fields["state"]["random"]:
+            return (low, low)
+        high = cast(fields["maximum"].text())
+        return (min(low, high), max(low, high))
 
     def _on_wpm_change(self, which: str, val: int):
         if which == "min":
@@ -908,13 +953,11 @@ class AutoKetikApp(QMainWindow):
         t_lay.setContentsMargins(0, 0, 0, 0)
         t_lay.setSpacing(8)
         t_lay.addWidget(QLabel("Berpikir tiap N kata:"))
-        self.entry_think_every = QLineEdit("8-25")
-        self.entry_think_every.setFixedWidth(65)
-        t_lay.addWidget(self.entry_think_every)
+        self.entry_think_every, self.think_every_fields = self._make_range_input("8", "25", 45)
+        t_lay.addWidget(self.entry_think_every, 1)
         t_lay.addWidget(QLabel("Durasi jeda (detik):"))
-        self.entry_think_pause = QLineEdit("1.5-6.0")
-        self.entry_think_pause.setFixedWidth(65)
-        t_lay.addWidget(self.entry_think_pause)
+        self.entry_think_pause, self.think_pause_fields = self._make_range_input("1.5", "6.0", 45)
+        t_lay.addWidget(self.entry_think_pause, 1)
         t_lay.addStretch()
         tg_lay.addWidget(t_row)
 
@@ -923,9 +966,8 @@ class AutoKetikApp(QMainWindow):
         s_lay.setContentsMargins(0, 0, 0, 0)
         s_lay.setSpacing(8)
         s_lay.addWidget(QLabel("Jeda ekstra Shift / Karakter spesial (detik):"))
-        self.entry_shift_delay = QLineEdit("0.12-0.3")
-        self.entry_shift_delay.setFixedWidth(65)
-        s_lay.addWidget(self.entry_shift_delay)
+        self.entry_shift_delay, self.shift_delay_fields = self._make_range_input("0.12", "0.3", 45)
+        s_lay.addWidget(self.entry_shift_delay, 1)
         s_lay.addStretch()
         tg_lay.addWidget(s_row)
         lay.addWidget(think_grp)
@@ -1312,11 +1354,11 @@ class AutoKetikApp(QMainWindow):
                 typo_rate=(self.typo_min / 100.0, self.typo_max / 100.0),
                 wave_period=float(self.entry_wave.text()),
                 start_fast=self.seg_start.get() == "fast",
-                think_every=parse_range(self.entry_think_every.text(), int),
-                think_pause=parse_range(self.entry_think_pause.text(), float),
-                notice_pause=parse_range(self.entry_typo_delay.text(), float),
-                shift_delay=parse_range(self.entry_shift_delay.text(), float),
-                typo_words=parse_range(self.entry_typo_words.text(), int),
+                think_every=self._read_mode_range(self.think_every_fields, int),
+                think_pause=self._read_mode_range(self.think_pause_fields, float),
+                notice_pause=self._read_mode_range(self.typo_delay_fields, float),
+                shift_delay=self._read_mode_range(self.shift_delay_fields, float),
+                typo_words=self._read_mode_range(self.typo_words_fields, int),
                 mac=sys.platform == "darwin"
             )
         except Exception as e:
