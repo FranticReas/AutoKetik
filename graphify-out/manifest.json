@@ -123,5 +123,40 @@
     "mtime": 1793266742.0461142,
     "ast_hash": "752aa83aa64361ac32860f882dcff932",
     "semantic_hash": ""
+  },
+  "firefox-extension/background.js": {
+    "mtime": 1793950737.991801,
+    "ast_hash": "10d561f49eb5abc7a5269b7dff705761",
+    "semantic_hash": ""
+  },
+  "firefox-extension/content.js": {
+    "mtime": 1793950737.9820144,
+    "ast_hash": "15d01668aab3c863b36d1658beb3b0d7",
+    "semantic_hash": ""
+  },
+  "firefox-extension/manifest.json": {
+    "mtime": 1793950746.706381,
+    "ast_hash": "e3dd10c32d689a4c9dd1be7267dbe0e8",
+    "semantic_hash": ""
+  },
+  "firefox-extension/popup.js": {
+    "mtime": 1793948623.838728,
+    "ast_hash": "c89bf694abeac3aa9b3bfbaf805c66f0",
+    "semantic_hash": ""
+  },
+  "firefox-extension/sidebar.js": {
+    "mtime": 1793950703.5445166,
+    "ast_hash": "6555303e657b09fa6f7eb2f7004442e5",
+    "semantic_hash": ""
+  },
+  "firefox-extension/popup.html": {
+    "mtime": 1793948623.8278134,
+    "ast_hash": "b65327373aafced4ac908f69e741ee21",
+    "semantic_hash": ""
+  },
+  "firefox-extension/sidebar.html": {
+    "mtime": 1793950675.839126,
+    "ast_hash": "9757ff35d66cefc5465759f0802735a4",
+    "semantic_hash": ""
   }
 }

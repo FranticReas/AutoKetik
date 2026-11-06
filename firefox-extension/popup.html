@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoKetik</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <div class="header">
+      <h1>AutoKetik</h1>
+      <button id="openSidebar" type="button" class="sidebar-btn" title="Buka di panel samping agar tidak tertutup saat berpindah fokus">Buka Sidebar ↗</button>
+    </div>
+
+    <label for="source">Sumber teks</label>
+    <select id="source">
+      <option value="paste">Tempel / tulis</option>
+      <option value="url">URL Google Docs publik</option>
+      <option value="file">File teks / HTML</option>
+    </select>
+
+    <div id="urlBox" class="row hidden">
+      <label for="url">
+        <input id="url" type="url" placeholder="https://docs.google.com/document/d/...">
+      </label>
+      <button id="fetch" type="button" class="secondary">Ambil</button>
+    </div>
+
+    <div id="fileBox" class="hidden" style="margin-top: 6px;">
+      <input id="file" type="file" accept=".txt,.html,.htm,text/plain,text/html">
+    </div>
+
+    <label for="text">Teks yang akan diketik</label>
+    <textarea id="text" rows="6" placeholder="Ketik atau tempel teks di sini..."></textarea>
+
+    <div class="grid">
+      <div>
+        <label for="wpm">Kecepatan (WPM)</label>
+        <input id="wpm" value="60" placeholder="60 atau 40-75">
+      </div>
+      <div>
+        <label for="delay">Hitung mundur (detik)</label>
+        <input id="delay" type="number" min="0" max="60" value="5">
+      </div>
+    </div>
+
+    <details>
+      <summary>Simulasi & Tempo Lanjutan</summary>
+      <div class="grid" style="margin-top: 8px;">
+        <div>
+          <label for="wave">Gelombang (detik)</label>
+          <input id="wave" type="number" value="120">
+        </div>
+        <div>
+          <label for="start">Mulai</label>
+          <select id="start">
+            <option value="fast">Cepat</option>
+            <option value="slow">Lambat</option>
+          </select>
+        </div>
+        <div>
+          <label for="typo">Peluang Typo (0–1)</label>
+          <input id="typo" value="0.03">
+        </div>
+        <div>
+          <label for="seed">Seed (opsional)</label>
+          <input id="seed" type="number" placeholder="acak">
+        </div>
+        <div>
+          <label for="thinkEvery">Jeda tiap kata</label>
+          <input id="thinkEvery" value="8-25">
+        </div>
+        <div>
+          <label for="thinkPause">Durasi jeda (s)</label>
+          <input id="thinkPause" value="1.5-6">
+        </div>
+        <div>
+          <label for="typoWords">Kata sblm koreksi</label>
+          <input id="typoWords" value="1-3">
+        </div>
+        <div>
+          <label for="typoDelay">Jeda koreksi (s)</label>
+          <input id="typoDelay" value="0.8-2">
+        </div>
+      </div>
+      <label class="checkbox-label">
+        <input id="noTypo" type="checkbox">
+        <span>Nonaktifkan typo</span>
+      </label>
+    </details>
+
+    <div class="buttons button-group">
+      <button id="preview" type="button" class="secondary">Pratinjau</button>
+      <button id="startBtn" type="button" class="primary">Mulai Mengetik</button>
+    </div>
+
+    <div class="buttons" style="margin-top: 6px;">
+      <button id="pause" type="button" class="secondary">Jeda</button>
+      <button id="resume" type="button" class="secondary">Lanjut</button>
+      <button id="stop" type="button" class="danger">Berhenti</button>
+    </div>
+
+    <div id="status" class="status-box" role="status">
+      Klik 'Mulai Mengetik', lalu segera klik kolom tujuan di halaman sebelum hitung mundur selesai.
+    </div>
+
+    <small>
+      Tips: Gunakan <strong>Buka Sidebar</strong> jika Anda ingin panel tetap terbuka saat berpindah fokus atau mengetik dokumen panjang.
+    </small>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
