@@ -123,5 +123,65 @@
     "mtime": 1793266742.0461142,
     "ast_hash": "752aa83aa64361ac32860f882dcff932",
     "semantic_hash": ""
+  },
+  "firefox-extension/background.js": {
+    "mtime": 1793951496.9266803,
+    "ast_hash": "bfe1a19ff9d81b8090449b6b74e61e75",
+    "semantic_hash": ""
+  },
+  "firefox-extension/content.js": {
+    "mtime": 1794291496.8702338,
+    "ast_hash": "126a954bddb4c8da61fa3dbfb6ca5857",
+    "semantic_hash": ""
+  },
+  "firefox-extension/manifest.json": {
+    "mtime": 1793951475.2169497,
+    "ast_hash": "5608fea2d25a0b07df5bb66edfdf2b40",
+    "semantic_hash": ""
+  },
+  "firefox-extension/popup.js": {
+    "mtime": 1794292726.323342,
+    "ast_hash": "005ca0866386908addba0f61834832bd",
+    "semantic_hash": ""
+  },
+  "firefox-extension/sidebar.js": {
+    "mtime": 1794292726.8805346,
+    "ast_hash": "156f8baa9fd7c243ce06e0e0a34dea27",
+    "semantic_hash": ""
+  },
+  "firefox-extension/popup.html": {
+    "mtime": 1794292714.6767018,
+    "ast_hash": "31999ad3fdcb90fcb1084717f82b3b6d",
+    "semantic_hash": ""
+  },
+  "firefox-extension/sidebar.html": {
+    "mtime": 1794292715.2735233,
+    "ast_hash": "c1c9b81eda57223391a89e9438712aa7",
+    "semantic_hash": ""
+  },
+  "firefox-extension/NOTES.md": {
+    "mtime": 1794292142.8620794,
+    "ast_hash": "37f10dbdd4d8299ec04ee096acf366b7",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-128.png": {
+    "mtime": 1793951447.427539,
+    "ast_hash": "b407695f437c982c1f13fd92fe213cd4",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-16.png": {
+    "mtime": 1793951447.4134684,
+    "ast_hash": "09e0c8ba171d5b64227b2ceb20b42da3",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-32.png": {
+    "mtime": 1793951447.4189014,
+    "ast_hash": "1756c2bbfa77b735f526aff3feb21ce1",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-48.png": {
+    "mtime": 1793951447.42042,
+    "ast_hash": "66e9c5d9fe98c61eec09a578167fcb40",
+    "semantic_hash": ""
   }
 }

@@ -160,7 +160,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "autoketik_config_run",
-      "community": 2,
+      "community": 5,
       "norm_label": "run"
     },
     {
@@ -170,7 +170,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "autoketik_config_block",
-      "community": 2,
+      "community": 5,
       "norm_label": "block"
     },
     {
@@ -180,7 +180,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "autoketik_config_block_text",
-      "community": 2,
+      "community": 5,
       "norm_label": ".text()"
     },
     {
@@ -220,7 +220,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "autoketik_engine_typist_init",
-      "community": 1,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -430,7 +430,7 @@
       "source_location": "L355",
       "_origin": "ast",
       "id": "autoketik_engine_guitypist_init",
-      "community": 1,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -1230,7 +1230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "autoketik_parser",
-      "community": 2,
+      "community": 5,
       "norm_label": "parser.py"
     },
     {
@@ -1240,7 +1240,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "autoketik_parser_pt",
-      "community": 2,
+      "community": 5,
       "norm_label": "_pt()"
     },
     {
@@ -1250,7 +1250,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "autoketik_parser_line",
-      "community": 2,
+      "community": 5,
       "norm_label": "_line()"
     },
     {
@@ -1270,7 +1270,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "autoketik_parser_docparser",
-      "community": 2,
+      "community": 5,
       "norm_label": "docparser"
     },
     {
@@ -1280,7 +1280,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "htmlparser",
-      "community": 2,
+      "community": 5,
       "norm_label": "htmlparser"
     },
     {
@@ -1290,7 +1290,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "autoketik_parser_docparser_init",
-      "community": 2,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -1300,7 +1300,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "autoketik_parser_docparser_props",
-      "community": 2,
+      "community": 5,
       "norm_label": "._props()"
     },
     {
@@ -1310,7 +1310,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "autoketik_parser_docparser_end_block",
-      "community": 2,
+      "community": 5,
       "norm_label": ".end_block()"
     },
     {
@@ -1320,7 +1320,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "autoketik_parser_docparser_add",
-      "community": 2,
+      "community": 5,
       "norm_label": ".add()"
     },
     {
@@ -1330,7 +1330,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "autoketik_parser_docparser_handle_starttag",
-      "community": 2,
+      "community": 5,
       "norm_label": ".handle_starttag()"
     },
     {
@@ -1340,7 +1340,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "autoketik_parser_docparser_handle_endtag",
-      "community": 2,
+      "community": 5,
       "norm_label": ".handle_endtag()"
     },
     {
@@ -1350,7 +1350,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "autoketik_parser_docparser_handle_data",
-      "community": 2,
+      "community": 5,
       "norm_label": ".handle_data()"
     },
     {
@@ -1390,7 +1390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "autoketik_parser_rationale_1",
-      "community": 2,
+      "community": 5,
       "norm_label": "autoketik.parser - parser html dokumen google docs dan pengambil sumber teks."
     },
     {
@@ -1452,6 +1452,736 @@
       "id": "autoketik_planner_rationale_22",
       "community": 5,
       "norm_label": "mengubah list block dokumen menjadi urutan aksi:     (\"text\", str) atau (\"hot\","
+    },
+    {
+      "label": "background.js",
+      "file_type": "code",
+      "source_file": "firefox-extension/background.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "firefox_extension_background",
+      "community": 25,
+      "norm_label": "background.js"
+    },
+    {
+      "label": "content.js",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "firefox_extension_content",
+      "community": 3,
+      "norm_label": "content.js"
+    },
+    {
+      "label": "neighbors",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "firefox_extension_content_neighbors",
+      "community": 3,
+      "norm_label": "neighbors"
+    },
+    {
+      "label": "progress",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "firefox_extension_content_progress",
+      "community": 3,
+      "norm_label": "progress"
+    },
+    {
+      "label": "dbg()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "firefox_extension_content_dbg",
+      "community": 3,
+      "norm_label": "dbg()"
+    },
+    {
+      "label": "range()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "firefox_extension_content_range",
+      "community": 3,
+      "norm_label": "range()"
+    },
+    {
+      "label": "rand()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "firefox_extension_content_rand",
+      "community": 3,
+      "norm_label": "rand()"
+    },
+    {
+      "label": "waitWhilePaused()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "firefox_extension_content_waitwhilepaused",
+      "community": 3,
+      "norm_label": "waitwhilepaused()"
+    },
+    {
+      "label": "sleep()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "firefox_extension_content_sleep",
+      "community": 3,
+      "norm_label": "sleep()"
+    },
+    {
+      "label": "notifyStatus()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "firefox_extension_content_notifystatus",
+      "community": 3,
+      "norm_label": "notifystatus()"
+    },
+    {
+      "label": "isEditable()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "firefox_extension_content_iseditable",
+      "community": 3,
+      "norm_label": "iseditable()"
+    },
+    {
+      "label": "deepActiveElement()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "firefox_extension_content_deepactiveelement",
+      "community": 3,
+      "norm_label": "deepactiveelement()"
+    },
+    {
+      "label": "getActiveEditableElement()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "firefox_extension_content_getactiveeditableelement",
+      "community": 3,
+      "norm_label": "getactiveeditableelement()"
+    },
+    {
+      "label": "isDocsTarget()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L228",
+      "_origin": "ast",
+      "id": "firefox_extension_content_isdocstarget",
+      "community": 3,
+      "norm_label": "isdocstarget()"
+    },
+    {
+      "label": "typoAt()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L242",
+      "_origin": "ast",
+      "id": "firefox_extension_content_typoat",
+      "community": 3,
+      "norm_label": "typoat()"
+    },
+    {
+      "label": "keyInit()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L265",
+      "_origin": "ast",
+      "id": "firefox_extension_content_keyinit",
+      "community": 3,
+      "norm_label": "keyinit()"
+    },
+    {
+      "label": "composeDocs()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L301",
+      "_origin": "ast",
+      "id": "firefox_extension_content_composedocs",
+      "community": 3,
+      "norm_label": "composedocs()"
+    },
+    {
+      "label": "fireKeys()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L321",
+      "_origin": "ast",
+      "id": "firefox_extension_content_firekeys",
+      "community": 3,
+      "norm_label": "firekeys()"
+    },
+    {
+      "label": "htmlDocument()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L333",
+      "_origin": "ast",
+      "id": "firefox_extension_content_htmldocument",
+      "community": 3,
+      "norm_label": "htmldocument()"
+    },
+    {
+      "label": "applyFormat()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L404",
+      "_origin": "ast",
+      "id": "firefox_extension_content_applyformat",
+      "community": 3,
+      "norm_label": "applyformat()"
+    },
+    {
+      "label": "formatKey()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L425",
+      "_origin": "ast",
+      "id": "firefox_extension_content_formatkey",
+      "community": 3,
+      "norm_label": "formatkey()"
+    },
+    {
+      "label": "insert()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L435",
+      "_origin": "ast",
+      "id": "firefox_extension_content_insert",
+      "community": 3,
+      "norm_label": "insert()"
+    },
+    {
+      "label": "deleteChar()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L574",
+      "_origin": "ast",
+      "id": "firefox_extension_content_deletechar",
+      "community": 3,
+      "norm_label": "deletechar()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L715",
+      "_origin": "ast",
+      "id": "firefox_extension_content_run",
+      "community": 3,
+      "norm_label": "run()"
+    },
+    {
+      "label": "manifest.json",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest",
+      "community": 2,
+      "norm_label": "manifest.json"
+    },
+    {
+      "label": "manifest_version",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_manifest_version",
+      "community": 2,
+      "norm_label": "manifest_version"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_description",
+      "community": 2,
+      "norm_label": "description"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_permissions",
+      "community": 2,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "host_permissions",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_host_permissions",
+      "community": 2,
+      "norm_label": "host_permissions"
+    },
+    {
+      "label": "action",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_action",
+      "community": 2,
+      "norm_label": "action"
+    },
+    {
+      "label": "default_title",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_action_default_title",
+      "community": 2,
+      "norm_label": "default_title"
+    },
+    {
+      "label": "default_popup",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_action_default_popup",
+      "community": 2,
+      "norm_label": "default_popup"
+    },
+    {
+      "label": "default_icon",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_action_default_icon",
+      "community": 2,
+      "norm_label": "default_icon"
+    },
+    {
+      "label": "16",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_default_icon_16",
+      "community": 2,
+      "norm_label": "16"
+    },
+    {
+      "label": "32",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_default_icon_32",
+      "community": 2,
+      "norm_label": "32"
+    },
+    {
+      "label": "48",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_default_icon_48",
+      "community": 2,
+      "norm_label": "48"
+    },
+    {
+      "label": "128",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_default_icon_128",
+      "community": 2,
+      "norm_label": "128"
+    },
+    {
+      "label": "sidebar_action",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_sidebar_action",
+      "community": 2,
+      "norm_label": "sidebar_action"
+    },
+    {
+      "label": "default_title",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_sidebar_action_default_title",
+      "community": 2,
+      "norm_label": "default_title"
+    },
+    {
+      "label": "default_panel",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_sidebar_action_default_panel",
+      "community": 2,
+      "norm_label": "default_panel"
+    },
+    {
+      "label": "default_icon",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_sidebar_action_default_icon",
+      "community": 2,
+      "norm_label": "default_icon"
+    },
+    {
+      "label": "background",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_background",
+      "community": 2,
+      "norm_label": "background"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_background_scripts",
+      "community": 2,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "content_scripts",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_content_scripts",
+      "community": 2,
+      "norm_label": "content_scripts"
+    },
+    {
+      "label": "icons",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_icons",
+      "community": 2,
+      "norm_label": "icons"
+    },
+    {
+      "label": "16",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_icons_16",
+      "community": 2,
+      "norm_label": "16"
+    },
+    {
+      "label": "32",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_icons_32",
+      "community": 2,
+      "norm_label": "32"
+    },
+    {
+      "label": "48",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_icons_48",
+      "community": 2,
+      "norm_label": "48"
+    },
+    {
+      "label": "128",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_icons_128",
+      "community": 2,
+      "norm_label": "128"
+    },
+    {
+      "label": "browser_specific_settings",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_browser_specific_settings",
+      "community": 2,
+      "norm_label": "browser_specific_settings"
+    },
+    {
+      "label": "gecko",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_browser_specific_settings_gecko",
+      "community": 2,
+      "norm_label": "gecko"
+    },
+    {
+      "label": "id",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_gecko_id",
+      "community": 2,
+      "norm_label": "id"
+    },
+    {
+      "label": "strict_min_version",
+      "file_type": "code",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "firefox_extension_manifest_gecko_strict_min_version",
+      "community": 2,
+      "norm_label": "strict_min_version"
+    },
+    {
+      "label": "popup.js",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "firefox_extension_popup",
+      "community": 23,
+      "norm_label": "popup.js"
+    },
+    {
+      "label": "getSourceStats()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_getsourcestats",
+      "community": 23,
+      "norm_label": "getsourcestats()"
+    },
+    {
+      "label": "renderDocumentPreview()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_renderdocumentpreview",
+      "community": 23,
+      "norm_label": "renderdocumentpreview()"
+    },
+    {
+      "label": "showDocumentPreview()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_showdocumentpreview",
+      "community": 23,
+      "norm_label": "showdocumentpreview()"
+    },
+    {
+      "label": "showRawSource()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_showrawsource",
+      "community": 23,
+      "norm_label": "showrawsource()"
+    },
+    {
+      "label": "syncRange()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_syncrange",
+      "community": 23,
+      "norm_label": "syncrange()"
+    },
+    {
+      "label": "initRangeControls()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_initrangecontrols",
+      "community": 23,
+      "norm_label": "initrangecontrols()"
+    },
+    {
+      "label": "updateSourceVisibility()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_updatesourcevisibility",
+      "community": 23,
+      "norm_label": "updatesourcevisibility()"
+    },
+    {
+      "label": "sendCommand()",
+      "file_type": "code",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L249",
+      "_origin": "ast",
+      "id": "firefox_extension_popup_sendcommand",
+      "community": 23,
+      "norm_label": "sendcommand()"
+    },
+    {
+      "label": "sidebar.js",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar",
+      "community": 24,
+      "norm_label": "sidebar.js"
+    },
+    {
+      "label": "getSourceStats()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_getsourcestats",
+      "community": 24,
+      "norm_label": "getsourcestats()"
+    },
+    {
+      "label": "renderDocumentPreview()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_renderdocumentpreview",
+      "community": 24,
+      "norm_label": "renderdocumentpreview()"
+    },
+    {
+      "label": "showDocumentPreview()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_showdocumentpreview",
+      "community": 24,
+      "norm_label": "showdocumentpreview()"
+    },
+    {
+      "label": "showRawSource()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_showrawsource",
+      "community": 24,
+      "norm_label": "showrawsource()"
+    },
+    {
+      "label": "syncRange()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_syncrange",
+      "community": 24,
+      "norm_label": "syncrange()"
+    },
+    {
+      "label": "initRangeControls()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_initrangecontrols",
+      "community": 24,
+      "norm_label": "initrangecontrols()"
+    },
+    {
+      "label": "updateSourceVisibility()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_updatesourcevisibility",
+      "community": 24,
+      "norm_label": "updatesourcevisibility()"
+    },
+    {
+      "label": "sendCommand()",
+      "file_type": "code",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L250",
+      "_origin": "ast",
+      "id": "firefox_extension_sidebar_sendcommand",
+      "community": 24,
+      "norm_label": "sendcommand()"
     },
     {
       "label": "graphify.md",
@@ -2274,6 +3004,96 @@
       "norm_label": "struktur proyek"
     },
     {
+      "label": "NOTES.md",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "firefox_extension_notes",
+      "community": 26,
+      "norm_label": "notes.md"
+    },
+    {
+      "label": "AutoKetik \u2013 ekstensi Firefox: temuan pengetikan di Google Docs",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "community": 26,
+      "norm_label": "autoketik \u2013 ekstensi firefox: temuan pengetikan di google docs"
+    },
+    {
+      "label": "Konteks",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_konteks",
+      "community": 26,
+      "norm_label": "konteks"
+    },
+    {
+      "label": "Struktur editor Google Docs",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_struktur_editor_google_docs",
+      "community": 26,
+      "norm_label": "struktur editor google docs"
+    },
+    {
+      "label": "Hasil uji: cara input yang diterima / ditolak Docs",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_hasil_uji_cara_input_yang_diterima_ditolak_docs",
+      "community": 26,
+      "norm_label": "hasil uji: cara input yang diterima / ditolak docs"
+    },
+    {
+      "label": "Kesimpulan desain",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_kesimpulan_desain",
+      "community": 26,
+      "norm_label": "kesimpulan desain"
+    },
+    {
+      "label": "Status `content.js` (versi terbaru)",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_status_content_js_versi_terbaru",
+      "community": 26,
+      "norm_label": "status `content.js` (versi terbaru)"
+    },
+    {
+      "label": "Risiko / hal yang belum terbukti",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_risiko_hal_yang_belum_terbukti",
+      "community": 26,
+      "norm_label": "risiko / hal yang belum terbukti"
+    },
+    {
+      "label": "Noise di Console yang bisa diabaikan",
+      "file_type": "document",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "firefox_extension_notes_noise_di_console_yang_bisa_diabaikan",
+      "community": 26,
+      "norm_label": "noise di console yang bisa diabaikan"
+    },
+    {
       "label": "Typing Into Active Window",
       "author": null,
       "captured_at": null,
@@ -2461,7 +3281,7 @@
     },
     {
       "label": "html_parser",
-      "community": 2,
+      "community": 5,
       "external": true,
       "file_type": "concept",
       "norm_label": "html_parser",
@@ -7519,6 +8339,1024 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L376",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_applyformat"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L301",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_composedocs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_dbg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L170",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_deepactiveelement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L537",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_deletechar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L321",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_firekeys"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L391",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_formatkey"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_getactiveeditableelement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L333",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_htmldocument"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_insert"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L228",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_isdocstarget"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_iseditable"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L265",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_keyinit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_neighbors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_notifystatus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_progress"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_rand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_range"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_run"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_sleep"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_typoat"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content",
+      "target": "firefox_extension_content_waitwhilepaused"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L479",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_insert",
+      "target": "firefox_extension_content_dbg"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L742",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_dbg"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_rand"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L833",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_waitwhilepaused"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_sleep",
+      "target": "firefox_extension_content_waitwhilepaused"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L388",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_applyformat",
+      "target": "firefox_extension_content_sleep"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_sleep"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L691",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_notifystatus"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L203",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_getactiveeditableelement",
+      "target": "firefox_extension_content_iseditable"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L202",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_getactiveeditableelement",
+      "target": "firefox_extension_content_deepactiveelement"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L713",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_getactiveeditableelement"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L540",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_deletechar",
+      "target": "firefox_extension_content_isdocstarget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L403",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_insert",
+      "target": "firefox_extension_content_isdocstarget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L750",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_isdocstarget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_typoat"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L411",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_insert",
+      "target": "firefox_extension_content_keyinit"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L418",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_insert",
+      "target": "firefox_extension_content_composedocs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L559",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_deletechar",
+      "target": "firefox_extension_content_firekeys"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L420",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_insert",
+      "target": "firefox_extension_content_firekeys"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L686",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_htmldocument"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L378",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_applyformat",
+      "target": "firefox_extension_content_formatkey"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L830",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_applyformat"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_insert"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/content.js",
+      "source_location": "L894",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_content_run",
+      "target": "firefox_extension_content_deletechar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_action"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_background"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_browser_specific_settings"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_content_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_host_permissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_icons"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_manifest_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_permissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_sidebar_action"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest",
+      "target": "firefox_extension_manifest_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_action",
+      "target": "firefox_extension_manifest_action_default_icon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_action",
+      "target": "firefox_extension_manifest_action_default_popup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_action",
+      "target": "firefox_extension_manifest_action_default_title"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_action_default_icon",
+      "target": "firefox_extension_manifest_default_icon_128"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_action_default_icon",
+      "target": "firefox_extension_manifest_default_icon_16"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_action_default_icon",
+      "target": "firefox_extension_manifest_default_icon_32"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_action_default_icon",
+      "target": "firefox_extension_manifest_default_icon_48"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_sidebar_action_default_icon",
+      "target": "firefox_extension_manifest_default_icon_16"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_sidebar_action_default_icon",
+      "target": "firefox_extension_manifest_default_icon_32"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_sidebar_action",
+      "target": "firefox_extension_manifest_sidebar_action_default_icon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_sidebar_action",
+      "target": "firefox_extension_manifest_sidebar_action_default_panel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_sidebar_action",
+      "target": "firefox_extension_manifest_sidebar_action_default_title"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_background",
+      "target": "firefox_extension_manifest_background_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_icons",
+      "target": "firefox_extension_manifest_icons_128"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_icons",
+      "target": "firefox_extension_manifest_icons_16"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_icons",
+      "target": "firefox_extension_manifest_icons_32"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_icons",
+      "target": "firefox_extension_manifest_icons_48"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_browser_specific_settings",
+      "target": "firefox_extension_manifest_browser_specific_settings_gecko"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_browser_specific_settings_gecko",
+      "target": "firefox_extension_manifest_gecko_id"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/manifest.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_manifest_browser_specific_settings_gecko",
+      "target": "firefox_extension_manifest_gecko_strict_min_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_getsourcestats"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_initrangecontrols"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_renderdocumentpreview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_sendcommand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_showdocumentpreview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_showrawsource"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_syncrange"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup",
+      "target": "firefox_extension_popup_updatesourcevisibility"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup_showdocumentpreview",
+      "target": "firefox_extension_popup_renderdocumentpreview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/popup.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_popup_initrangecontrols",
+      "target": "firefox_extension_popup_syncrange"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_getsourcestats"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_initrangecontrols"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_renderdocumentpreview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_sendcommand"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_showdocumentpreview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_showrawsource"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_syncrange"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar",
+      "target": "firefox_extension_sidebar_updatesourcevisibility"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar_showdocumentpreview",
+      "target": "firefox_extension_sidebar_renderdocumentpreview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/sidebar.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_sidebar_initrangecontrols",
+      "target": "firefox_extension_sidebar_syncrange"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
@@ -8237,6 +10075,86 @@
       "target": "readme_mengetik_file_teks"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes",
+      "target": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "target": "firefox_extension_notes_hasil_uji_cara_input_yang_diterima_ditolak_docs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "target": "firefox_extension_notes_kesimpulan_desain"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "target": "firefox_extension_notes_konteks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "target": "firefox_extension_notes_noise_di_console_yang_bisa_diabaikan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "target": "firefox_extension_notes_risiko_hal_yang_belum_terbukti"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "target": "firefox_extension_notes_status_content_js_versi_terbaru"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "firefox-extension/NOTES.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "firefox_extension_notes_autoketik_ekstensi_firefox_temuan_pengetikan_di_google_docs",
+      "target": "firefox_extension_notes_struktur_editor_google_docs"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -8278,5 +10196,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "86c88623fdc5fac8c7baac1e7d19bd85b3d16e2f"
+  "built_at_commit": "751066861404c8c8d7812fb5dea78ce55029f490"
 }
