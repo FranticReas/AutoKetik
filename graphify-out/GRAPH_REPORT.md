@@ -1,16 +1,16 @@
-# Graph Report - AutoKetik  (2026-11-06)
+# Graph Report - AutoKetik  (2026-11-10)
 
 ## Corpus Check
-- 29 files · ~20,452 words
+- 30 files · ~27,700 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 289 nodes · 542 edges · 26 communities (15 shown, 11 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.75)
+- 336 nodes · 613 edges · 27 communities (16 shown, 11 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.75)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4a06cb57`
+- Built from commit: `75106686`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,6 +40,7 @@
 - [[_COMMUNITY_Community 22|Community 22]]
 - [[_COMMUNITY_Community 23|Community 23]]
 - [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 26|Community 26]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `AutoKetikApp` - 52 edges
@@ -49,9 +50,9 @@
 5. `Config` - 13 edges
 6. `SegmentedButton` - 13 edges
 7. `DocParser` - 13 edges
-8. `AutoKetik` - 13 edges
-9. `StopTyping` - 12 edges
-10. `What You Must Do When Invoked` - 12 edges
+8. `run()` - 13 edges
+9. `AutoKetik` - 13 edges
+10. `StopTyping` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `GUITypist` --uses--> `StopTyping`  [INFERRED]
@@ -68,7 +69,7 @@
 ## Import Cycles
 - 1-file cycle: `AutoKetik.py -> AutoKetik.py`
 
-## Communities (26 total, 11 thin omitted)
+## Communities (27 total, 11 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.08
@@ -79,12 +80,12 @@ Cohesion: 0.17
 Nodes (8): GUITypist, 0..1. 1 = paling cepat, 0 = paling lambat. Halus (cosinus)., Variasi acak kecil antar kata (momentum), di atas gelombang WPM., Pilih sisa teks (beberapa kata) yang terus diketik sebelum sadar ada typo., Simulasi pengetikan ala manusia dengan kecepatan bergelombang,     jeda berpiki, Pertahankan teks setelah typo jika bagian yang sudah diketik cukup panjang., Subclass Typist dengan hook progress, status, dan animasi pengetikan real-time u, Typist
 
 ### Community 2 - "Community 2"
-Cohesion: 0.12
-Nodes (16): background, scripts, browser_specific_settings, gecko, content_scripts, description, id, strict_min_version (+8 more)
+Cohesion: 0.07
+Nodes (30): action, default_icon, default_popup, default_title, background, scripts, browser_specific_settings, gecko (+22 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.39
-Nodes (6): insert(), neighbors, rand(), run(), sleep(), typoAt()
+Cohesion: 0.18
+Nodes (21): applyFormat(), composeDocs(), dbg(), deepActiveElement(), deleteChar(), fireKeys(), formatKey(), getActiveEditableElement() (+13 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.08
@@ -119,15 +120,19 @@ Cohesion: 0.11
 Nodes (18): Typing Into Active Window, Alur penggunaan, AutoKetik, Catatan, Public Google Docs Viewer Access, HTML Format Preservation, Mengambil teks dari clipboard, Mengambil teks dari Google Docs (+10 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.40
-Nodes (4): delayEl, statusEl, textEl, wpmEl
+Cohesion: 0.28
+Nodes (4): initRangeControls(), renderDocumentPreview(), showDocumentPreview(), syncRange()
 
 ### Community 24 - "Community 24"
-Cohesion: 0.83
-Nodes (4): $(), ids, send(), status()
+Cohesion: 0.31
+Nodes (4): initRangeControls(), renderDocumentPreview(), showDocumentPreview(), syncRange()
+
+### Community 26 - "Community 26"
+Cohesion: 0.22
+Nodes (8): AutoKetik – ekstensi Firefox: temuan pengetikan di Google Docs, Hasil uji: cara input yang diterima / ditolak Docs, Kesimpulan desain, Konteks, Noise di Console yang bisa diabaikan, Risiko / hal yang belum terbukti, Status `content.js` (versi terbaru), Struktur editor Google Docs
 
 ## Knowledge Gaps
-- **85 isolated node(s):** `neighbors`, `manifest_version`, `name`, `version`, `description` (+80 more)
+- **96 isolated node(s):** `neighbors`, `progress`, `manifest_version`, `name`, `version` (+91 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -135,11 +140,11 @@ Nodes (4): $(), ids, send(), status()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AutoKetikApp` connect `Community 0` to `Community 1`, `Community 5`?**
-  _High betweenness centrality (0.140) - this node is a cross-community bridge._
+  _High betweenness centrality (0.103) - this node is a cross-community bridge._
 - **Why does `Typist` connect `Community 1` to `Community 5`?**
-  _High betweenness centrality (0.071) - this node is a cross-community bridge._
+  _High betweenness centrality (0.052) - this node is a cross-community bridge._
 - **Why does `GUITypist` connect `Community 1` to `Community 0`, `Community 5`?**
-  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `AutoKetikApp` (e.g. with `Config` and `StopTyping`) actually correct?**
   _`AutoKetikApp` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 2 inferred relationships involving `Typist` (e.g. with `Config` and `StopTyping`) actually correct?**

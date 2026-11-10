@@ -33,6 +33,10 @@
 
     <label for="text">Teks yang akan diketik</label>
     <textarea id="text" rows="6" placeholder="Ketik atau tempel teks di sini..."></textarea>
+    <section id="documentPreview" class="document-preview hidden" aria-label="Pratinjau dokumen">
+      <iframe id="documentFrame" title="Pratinjau dokumen" sandbox=""></iframe>
+      <button id="toggleSource" type="button" class="preview-toggle">Lihat sumber HTML</button>
+    </section>
 
     <div class="grid">
       <div>
@@ -68,20 +72,48 @@
           <input id="seed" type="number" placeholder="acak">
         </div>
         <div>
-          <label for="thinkEvery">Jeda tiap kata</label>
-          <input id="thinkEvery" value="8-25">
+          <label for="thinkEveryMin">Jeda tiap kata</label>
+          <div class="range-control" data-range="thinkEvery">
+            <input id="thinkEveryMin" type="number" min="1" step="1" value="8" aria-label="Jumlah minimum kata sebelum jeda">
+            <span class="range-separator">—</span>
+            <input id="thinkEveryMax" data-range-part="max" type="number" min="1" step="1" value="25" aria-label="Jumlah maksimum kata sebelum jeda">
+            <details class="range-menu"><summary title="Opsi variasi">⌄</summary><div class="range-menu-items"><button type="button" data-range-mode="constant">Konstan</button><button type="button" data-range-mode="random">Acak antara dua nilai konstan</button></div></details>
+          </div>
+          <input id="thinkEvery" type="hidden" value="8-25">
+          <input id="thinkEveryMode" type="hidden" value="random">
         </div>
         <div>
-          <label for="thinkPause">Durasi jeda (s)</label>
-          <input id="thinkPause" value="1.5-6">
+          <label for="thinkPauseMin">Durasi jeda (s)</label>
+          <div class="range-control" data-range="thinkPause">
+            <input id="thinkPauseMin" type="number" min="0" step="0.1" value="1.5" aria-label="Durasi jeda minimum dalam detik">
+            <span class="range-separator">—</span>
+            <input id="thinkPauseMax" data-range-part="max" type="number" min="0" step="0.1" value="6" aria-label="Durasi jeda maksimum dalam detik">
+            <details class="range-menu"><summary title="Opsi variasi">⌄</summary><div class="range-menu-items"><button type="button" data-range-mode="constant">Konstan</button><button type="button" data-range-mode="random">Acak antara dua nilai konstan</button></div></details>
+          </div>
+          <input id="thinkPause" type="hidden" value="1.5-6">
+          <input id="thinkPauseMode" type="hidden" value="random">
         </div>
         <div>
-          <label for="typoWords">Kata sblm koreksi</label>
-          <input id="typoWords" value="1-3">
+          <label for="typoWordsMin">Kata sebelum sadar</label>
+          <div class="range-control" data-range="typoWords">
+            <input id="typoWordsMin" type="number" min="0" step="1" value="1" aria-label="Jumlah minimum kata">
+            <span class="range-separator">—</span>
+            <input id="typoWordsMax" data-range-part="max" type="number" min="0" step="1" value="3" aria-label="Jumlah maksimum kata">
+            <details class="range-menu"><summary title="Opsi variasi">⌄</summary><div class="range-menu-items"><button type="button" data-range-mode="constant">Konstan</button><button type="button" data-range-mode="random">Acak antara dua nilai konstan</button></div></details>
+          </div>
+          <input id="typoWords" type="hidden" value="1-3">
+          <input id="typoWordsMode" type="hidden" value="random">
         </div>
         <div>
-          <label for="typoDelay">Jeda koreksi (s)</label>
-          <input id="typoDelay" value="0.8-2">
+          <label for="typoDelayMin">Jeda sadar (detik)</label>
+          <div class="range-control" data-range="typoDelay">
+            <input id="typoDelayMin" type="number" min="0" step="0.1" value="0.8" aria-label="Jeda minimum dalam detik">
+            <span class="range-separator">—</span>
+            <input id="typoDelayMax" data-range-part="max" type="number" min="0" step="0.1" value="2" aria-label="Jeda maksimum dalam detik">
+            <details class="range-menu"><summary title="Opsi variasi">⌄</summary><div class="range-menu-items"><button type="button" data-range-mode="constant">Konstan</button><button type="button" data-range-mode="random">Acak antara dua nilai konstan</button></div></details>
+          </div>
+          <input id="typoDelay" type="hidden" value="0.8-2">
+          <input id="typoDelayMode" type="hidden" value="random">
         </div>
       </div>
       <label class="checkbox-label">
