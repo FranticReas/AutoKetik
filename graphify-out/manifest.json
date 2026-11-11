@@ -1,0 +1,187 @@
+{
+  "AutoKetik.py": {
+    "mtime": 1792993114.6946952,
+    "ast_hash": "1c2c2162b716b302b7470f3e824a99ba",
+    "semantic_hash": "1c2c2162b716b302b7470f3e824a99ba"
+  },
+  "AutoKetikGUI.py": {
+    "mtime": 1793266742.0476384,
+    "ast_hash": "e4a9bd810f61e12dc41e87183c12ca46",
+    "semantic_hash": "e4a9bd810f61e12dc41e87183c12ca46"
+  },
+  "autoketik/__init__.py": {
+    "mtime": 1792993108.110454,
+    "ast_hash": "f7311b38e7a822df9f7038b457c8fe12",
+    "semantic_hash": "f7311b38e7a822df9f7038b457c8fe12"
+  },
+  "autoketik/cli.py": {
+    "mtime": 1792993002.5121021,
+    "ast_hash": "7562a500038af20e4b08aa7466ccf39d",
+    "semantic_hash": "7562a500038af20e4b08aa7466ccf39d"
+  },
+  "autoketik/config.py": {
+    "mtime": 1792992902.600178,
+    "ast_hash": "5c459b95a1e60621378d39dc6945f010",
+    "semantic_hash": "5c459b95a1e60621378d39dc6945f010"
+  },
+  "autoketik/engine.py": {
+    "mtime": 1793862748.4170392,
+    "ast_hash": "67e7a62025a71cf2ccdc4f0e3ca63458",
+    "semantic_hash": ""
+  },
+  "autoketik/gui.py": {
+    "mtime": 1793862748.4180815,
+    "ast_hash": "ded9a1b1359645b229724a0ce071eefd",
+    "semantic_hash": ""
+  },
+  "autoketik/parser.py": {
+    "mtime": 1792992936.0569453,
+    "ast_hash": "de8aa24c2d5ec9eb9cfc5d7bf9445b27",
+    "semantic_hash": "de8aa24c2d5ec9eb9cfc5d7bf9445b27"
+  },
+  "autoketik/planner.py": {
+    "mtime": 1792992947.9508936,
+    "ast_hash": "056ceb3e6098ac99621a7f07f87cb99f",
+    "semantic_hash": "056ceb3e6098ac99621a7f07f87cb99f"
+  },
+  "README.md": {
+    "mtime": 1793866999.0178442,
+    "ast_hash": "4410bfef617bc337c91cf29700477f56",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1793866953.8641877,
+    "ast_hash": "e9f29296ea5d5db6047f8d08a84a602b",
+    "semantic_hash": ""
+  },
+  ".codex/hooks.json": {
+    "mtime": 1793266742.0155628,
+    "ast_hash": "7e74c9f461ca6ae114521a4442cf99c8",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1793266742.0124013,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1793266742.0134575,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/SKILL.md": {
+    "mtime": 1793266742.018255,
+    "ast_hash": "3ea885b8b7da6151fc4d75f517b2a331",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/add-watch.md": {
+    "mtime": 1793266742.018255,
+    "ast_hash": "58c888b5ec0689a886543dd765c1acc9",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/exports.md": {
+    "mtime": 1793266742.020395,
+    "ast_hash": "ecc0c36852fee4ba6280cdf2b9149039",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1793266742.020915,
+    "ast_hash": "e342f30a5acd60c87ff8ce02a1b62644",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1793266742.0379567,
+    "ast_hash": "aa0e7ef186392cad062e60483ca7dbbf",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/hooks.md": {
+    "mtime": 1793266742.0400102,
+    "ast_hash": "0045c2f12c69bff3a641a8908a1ac057",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/query.md": {
+    "mtime": 1793266742.0405333,
+    "ast_hash": "0796228c127ce6cd13ac048bf2fb234e",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/transcribe.md": {
+    "mtime": 1793266742.0420563,
+    "ast_hash": "5c6a9af05d12b5797b2fa8b9493dcc37",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/update.md": {
+    "mtime": 1793266742.0435941,
+    "ast_hash": "01c78ea9438925c605b58a2eecbbcf5b",
+    "semantic_hash": ""
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1793862748.415526,
+    "ast_hash": "2b23503628bf2ec71d067a85ca8948ab",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1793266742.0461142,
+    "ast_hash": "752aa83aa64361ac32860f882dcff932",
+    "semantic_hash": ""
+  },
+  "firefox-extension/background.js": {
+    "mtime": 1793951496.9266803,
+    "ast_hash": "bfe1a19ff9d81b8090449b6b74e61e75",
+    "semantic_hash": ""
+  },
+  "firefox-extension/content.js": {
+    "mtime": 1794291496.8702338,
+    "ast_hash": "126a954bddb4c8da61fa3dbfb6ca5857",
+    "semantic_hash": ""
+  },
+  "firefox-extension/manifest.json": {
+    "mtime": 1793951475.2169497,
+    "ast_hash": "5608fea2d25a0b07df5bb66edfdf2b40",
+    "semantic_hash": ""
+  },
+  "firefox-extension/popup.js": {
+    "mtime": 1794292726.323342,
+    "ast_hash": "005ca0866386908addba0f61834832bd",
+    "semantic_hash": ""
+  },
+  "firefox-extension/sidebar.js": {
+    "mtime": 1794292726.8805346,
+    "ast_hash": "156f8baa9fd7c243ce06e0e0a34dea27",
+    "semantic_hash": ""
+  },
+  "firefox-extension/popup.html": {
+    "mtime": 1794292714.6767018,
+    "ast_hash": "31999ad3fdcb90fcb1084717f82b3b6d",
+    "semantic_hash": ""
+  },
+  "firefox-extension/sidebar.html": {
+    "mtime": 1794292715.2735233,
+    "ast_hash": "c1c9b81eda57223391a89e9438712aa7",
+    "semantic_hash": ""
+  },
+  "firefox-extension/NOTES.md": {
+    "mtime": 1794292142.8620794,
+    "ast_hash": "37f10dbdd4d8299ec04ee096acf366b7",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-128.png": {
+    "mtime": 1793951447.427539,
+    "ast_hash": "b407695f437c982c1f13fd92fe213cd4",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-16.png": {
+    "mtime": 1793951447.4134684,
+    "ast_hash": "09e0c8ba171d5b64227b2ceb20b42da3",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-32.png": {
+    "mtime": 1793951447.4189014,
+    "ast_hash": "1756c2bbfa77b735f526aff3feb21ce1",
+    "semantic_hash": ""
+  },
+  "firefox-extension/icons/icon-48.png": {
+    "mtime": 1793951447.42042,
+    "ast_hash": "66e9c5d9fe98c61eec09a578167fcb40",
+    "semantic_hash": ""
+  }
+}
