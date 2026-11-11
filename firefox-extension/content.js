@@ -15,6 +15,15 @@ const DEBUG = true;
 const API = globalThis.browser ?? globalThis.chrome;
 const ORIGINAL_RANDOM = Math.random;
 
+const t = (key, subs = [], fallback = "") => {
+    try {
+        const msg = API.i18n ? API.i18n.getMessage(key, subs) : "";
+        return msg || fallback || key;
+    } catch {
+        return fallback || key;
+    }
+};
+
 const neighbors = {
     q: "wa",
     w: "qes",
@@ -736,7 +745,7 @@ async function run(msg) {
             if (isTop)
                 notifyStatus({
                     state: "idle",
-                    text: "Teks kosong.",
+                    text: t("typingEmptyText", [], "Teks kosong."),
                 });
             return;
         }
@@ -748,7 +757,7 @@ async function run(msg) {
                 notifyStatus({
                     state: "counting",
                     countdown: d,
-                    text: `Hitung mundur ${d} detik... Fokuskan kursor ke kolom tujuan.`,
+                    text: t("typingCountdown", [String(d)], `Hitung mundur ${d} detik... Fokuskan kursor ke kolom tujuan.`),
                 });
             }
             await sleep(1000, t);
@@ -767,7 +776,7 @@ async function run(msg) {
 
             notifyStatus({
                 state: "error",
-                text: "Gagal: Kolom input tidak aktif. Klik kolom teks atau editor di halaman lalu ulangi.",
+                text: t("typingTargetError", [], "Gagal: Kolom input tidak aktif. Klik kolom teks atau editor di halaman lalu ulangi."),
             });
             return;
         }
@@ -818,9 +827,10 @@ async function run(msg) {
                 4294967296;
         }
 
+        const docsModeText = docsMode ? t("typingDocsMode", [], " (mode Google Docs)") : "";
         notifyStatus({
             state: "running",
-            text: `Mengetik dimulai${docsMode ? " (mode Google Docs)" : ""}... (0/${chars.length})`,
+            text: t("typingStarted", [docsModeText, String(chars.length)], `Mengetik dimulai${docsModeText}... (0/${chars.length})`),
         });
 
         progress.i = 0;
@@ -844,7 +854,7 @@ async function run(msg) {
                     warnedEnter = true;
                     notifyStatus({
                         state: "running",
-                        text: "Peringatan: Enter tidak diterima editor ini.",
+                        text: t("typingWarnEnter", [], "Peringatan: Enter tidak diterima editor ini."),
                     });
                 }
             } else if (ok) {
@@ -861,8 +871,8 @@ async function run(msg) {
             notifyStatus({
                 state: "error",
                 text: docsMode
-                    ? "Gagal: Google Docs menolak input teks. Buka Console (F12) untuk detail."
-                    : "Gagal: editor menolak input teks. Buka Console (F12) untuk detail.",
+                    ? t("typingErrorDocs", [], "Gagal: Google Docs menolak input teks. Buka Console (F12) untuk detail.")
+                    : t("typingErrorEditor", [], "Gagal: editor menolak input teks. Buka Console (F12) untuk detail."),
             });
         };
 
@@ -947,7 +957,7 @@ async function run(msg) {
                     typoEnabled = false;
                     notifyStatus({
                         state: "running",
-                        text: "Peringatan: Docs tidak menerima penghapusan, simulasi typo dimatikan. Periksa kata terakhir.",
+                        text: t("typingWarnTypoDisabled", [], "Peringatan: Docs tidak menerima penghapusan, simulasi typo dimatikan. Periksa kata terakhir."),
                     });
                 }
 
@@ -1006,7 +1016,7 @@ async function run(msg) {
             state = "idle";
             notifyStatus({
                 state: "idle",
-                text: "Pengetikan selesai!",
+                text: t("typingFinished", [], "Pengetikan selesai!"),
             });
         }
     } catch (err) {
@@ -1039,7 +1049,7 @@ API.runtime.onMessage.addListener(
             if (window === window.top)
                 notifyStatus({
                     state: "idle",
-                    text: "Pengetikan dihentikan.",
+                    text: t("typingStopped", [], "Pengetikan dihentikan."),
                 });
             sendResponse({ ok: true });
         } else if (msg.type === "PAUSE") {
@@ -1047,7 +1057,7 @@ API.runtime.onMessage.addListener(
                 state = "paused";
                 notifyStatus({
                     state: "paused",
-                    text: `Pengetikan dijeda (${progress.i}/${progress.total}).`,
+                    text: t("typingPaused", [String(progress.i), String(progress.total)], `Pengetikan dijeda (${progress.i}/${progress.total}).`),
                 });
             }
             sendResponse({ ok: true });
@@ -1056,7 +1066,7 @@ API.runtime.onMessage.addListener(
                 state = "running";
                 notifyStatus({
                     state: "running",
-                    text: "Pengetikan dilanjutkan.",
+                    text: t("typingResumed", [], "Pengetikan dilanjutkan."),
                 });
             }
             sendResponse({ ok: true });

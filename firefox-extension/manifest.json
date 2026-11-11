@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "AutoKetik",
+  "default_locale": "id",
+  "name": "__MSG_extName__",
   "version": "1.1.0",
-  "description": "Mengetik teks dengan simulasi manusia di halaman web aktif.",
+  "description": "__MSG_extDescription__",
   "permissions": [
     "activeTab",
     "storage",
@@ -13,7 +14,7 @@
     "<all_urls>"
   ],
   "action": {
-    "default_title": "AutoKetik",
+    "default_title": "__MSG_extName__",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon-16.png",
@@ -23,7 +24,7 @@
     }
   },
   "sidebar_action": {
-    "default_title": "AutoKetik Sidebar",
+    "default_title": "__MSG_sidebarTitle__",
     "default_panel": "sidebar.html",
     "default_icon": {
       "16": "icons/icon-16.png",

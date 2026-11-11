@@ -1,0 +1,299 @@
+{
+  "extName": {
+    "message": "AutoKetik",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Type text with human simulation on active web pages.",
+    "description": "Extension description"
+  },
+  "sidebarTitle": {
+    "message": "AutoKetik Sidebar",
+    "description": "Sidebar title"
+  },
+  "openSidebarBtn": {
+    "message": "Open Sidebar ↗"
+  },
+  "openSidebarBtnTitle": {
+    "message": "Open in side panel so it stays open when switching focus"
+  },
+  "sourceLabel": {
+    "message": "Text source"
+  },
+  "sourceOptionPaste": {
+    "message": "Paste / write"
+  },
+  "sourceOptionUrl": {
+    "message": "Public Google Docs URL"
+  },
+  "sourceOptionFile": {
+    "message": "Text / HTML file"
+  },
+  "fetchBtn": {
+    "message": "Fetch"
+  },
+  "textLabel": {
+    "message": "Text to type"
+  },
+  "textPlaceholder": {
+    "message": "Type or paste text here..."
+  },
+  "previewAriaLabel": {
+    "message": "Document preview"
+  },
+  "toggleSourceHtml": {
+    "message": "View HTML source"
+  },
+  "toggleSourceDoc": {
+    "message": "Back to document preview"
+  },
+  "wpmLabel": {
+    "message": "Speed (WPM)"
+  },
+  "wpmMinAria": {
+    "message": "Minimum WPM speed"
+  },
+  "wpmMaxAria": {
+    "message": "Maximum WPM speed"
+  },
+  "rangeModeConstant": {
+    "message": "Constant"
+  },
+  "rangeModeRandom": {
+    "message": "Random between two constants"
+  },
+  "rangeMenuTitle": {
+    "message": "Variation options"
+  },
+  "delayLabel": {
+    "message": "Countdown (seconds)"
+  },
+  "advancedSummary": {
+    "message": "Advanced Simulation & Pace"
+  },
+  "waveLabel": {
+    "message": "Wave cycle (seconds)"
+  },
+  "startLabel": {
+    "message": "Start pace"
+  },
+  "startFast": {
+    "message": "Fast"
+  },
+  "startSlow": {
+    "message": "Slow"
+  },
+  "typoLabel": {
+    "message": "Typo Chance (0–1)"
+  },
+  "seedLabel": {
+    "message": "Seed (optional)"
+  },
+  "seedPlaceholder": {
+    "message": "random"
+  },
+  "thinkEveryLabel": {
+    "message": "Pause every words"
+  },
+  "thinkEveryMinAria": {
+    "message": "Minimum words before pause"
+  },
+  "thinkEveryMaxAria": {
+    "message": "Maximum words before pause"
+  },
+  "thinkPauseLabel": {
+    "message": "Pause duration (s)"
+  },
+  "thinkPauseMinAria": {
+    "message": "Minimum pause duration in seconds"
+  },
+  "thinkPauseMaxAria": {
+    "message": "Maximum pause duration in seconds"
+  },
+  "typoWordsLabel": {
+    "message": "Words before realizing typo"
+  },
+  "typoWordsMinAria": {
+    "message": "Minimum words"
+  },
+  "typoWordsMaxAria": {
+    "message": "Maximum words"
+  },
+  "typoDelayLabel": {
+    "message": "Realization pause (seconds)"
+  },
+  "typoDelayMinAria": {
+    "message": "Minimum pause in seconds"
+  },
+  "typoDelayMaxAria": {
+    "message": "Maximum pause in seconds"
+  },
+  "noTypoLabel": {
+    "message": "Disable typos"
+  },
+  "previewBtn": {
+    "message": "Preview"
+  },
+  "startBtn": {
+    "message": "Start Typing"
+  },
+  "pauseBtn": {
+    "message": "Pause"
+  },
+  "resumeBtn": {
+    "message": "Resume"
+  },
+  "stopBtn": {
+    "message": "Stop"
+  },
+  "defaultStatusPopup": {
+    "message": "Click 'Start Typing', then immediately click the target input field on the page before countdown finishes."
+  },
+  "defaultStatusSidebar": {
+    "message": "Click 'Start Typing', then focus your cursor into the document/input field on the active web page."
+  },
+  "tipPopupNote": {
+    "message": "Tip: Use <strong>Open Sidebar</strong> if you want the panel to stay open when switching focus or typing long documents."
+  },
+  "tipSidebarNote": {
+    "message": "The sidebar panel stays open when you click the document page."
+  },
+
+  "sourceTip": {
+    "message": "Content source: type/paste directly, automatically fetch from public Google Docs link, or upload a .txt/.html file."
+  },
+  "textTip": {
+    "message": "Content of the document/text to simulate typing automatically on the active web page."
+  },
+  "wpmTip": {
+    "message": "Typing speed in Words Per Minute (constant or random between two constants)."
+  },
+  "delayTip": {
+    "message": "Wait time before typing begins. Gives you time to click the target input field on the web page."
+  },
+  "waveTip": {
+    "message": "Length of human rhythm cycle (typing speed will gradually wave up and down like natural human rhythm)."
+  },
+  "startTip": {
+    "message": "Initial typing tempo: 'Fast' then slower, or 'Slow' then gradually faster."
+  },
+  "typoTip": {
+    "message": "Chance of mistyping neighboring keyboard keys (e.g. 0.03 = 3% chance per character)."
+  },
+  "seedTip": {
+    "message": "Random number generator seed (RNG). Using the same number reproduces identical speed and typo patterns."
+  },
+  "thinkEveryTip": {
+    "message": "Number of words typed before a natural human thinking pause (constant or random range)."
+  },
+  "thinkPauseTip": {
+    "message": "Duration of thinking pause in seconds (constant or random range)."
+  },
+  "typoWordsTip": {
+    "message": "How many words are typed after a typo occurs before realizing it and backspacing."
+  },
+  "typoDelayTip": {
+    "message": "Pause duration when realizing a mistake before starting to backspace."
+  },
+  "noTypoTip": {
+    "message": "Check this option for 100% accurate typing without any mistype simulation."
+  },
+
+  "statusFileLoaded": {
+    "message": "File loaded successfully: $1 ($2 characters$3)."
+  },
+  "statusHtmlNotCounted": {
+    "message": "; HTML/CSS not counted"
+  },
+  "statusFileError": {
+    "message": "Failed to read file: $1"
+  },
+  "statusDocsInvalidUrl": {
+    "message": "Invalid Google Docs URL. Make sure the link format is https://docs.google.com/document/d/..."
+  },
+  "statusDocsDownloading": {
+    "message": "Downloading text from Google Docs..."
+  },
+  "statusDocsDownloadError": {
+    "message": "Failed to download document. Ensure Google Docs sharing is set to public ('Anyone with the link')."
+  },
+  "statusDocsLoaded": {
+    "message": "Google Docs text loaded successfully ($1 characters; HTML/CSS not counted)."
+  },
+  "statusSidebarMenu1": {
+    "message": "Open Firefox browser menu > Sidebar > AutoKetik."
+  },
+  "statusSidebarMenu2": {
+    "message": "Open Firefox menu: Press Alt, then select View > Sidebar > AutoKetik."
+  },
+  "statusTextEmpty": {
+    "message": "Text is still empty. Please enter or paste text first."
+  },
+  "statusPreviewStats": {
+    "message": "Preview: $1 characters | $2 words."
+  },
+  "statusEnterTextFirst": {
+    "message": "Please enter or paste the text you want to type first."
+  },
+  "statusTabDetectError": {
+    "message": "Failed to detect active tab: $1"
+  },
+  "statusNoTabFound": {
+    "message": "No active tab found."
+  },
+  "statusProtectedPage": {
+    "message": "Extension cannot run on Firefox system pages (about:). Open a normal web page tab."
+  },
+  "statusCountdown": {
+    "message": "Countdown $1 seconds... Click the target field on the page now!"
+  },
+  "statusTypingStarted": {
+    "message": "Typing started on active field in page."
+  },
+  "statusCommandSent": {
+    "message": "Command $1 sent."
+  },
+  "statusScriptNotActive": {
+    "message": "Script is not active on this tab yet. Please reload (Refresh / F5) your web tab and try again."
+  },
+
+  "typingEmptyText": {
+    "message": "Empty text."
+  },
+  "typingCountdown": {
+    "message": "Countdown $1 seconds... Focus cursor on target field."
+  },
+  "typingTargetError": {
+    "message": "Failed: No active input field. Click a text field or editor on the page and try again."
+  },
+  "typingStarted": {
+    "message": "Typing started$1... (0/$2)"
+  },
+  "typingDocsMode": {
+    "message": " (Google Docs mode)"
+  },
+  "typingWarnEnter": {
+    "message": "Warning: Enter key is not accepted by this editor."
+  },
+  "typingErrorDocs": {
+    "message": "Failed: Google Docs rejected text input. Open Console (F12) for details."
+  },
+  "typingErrorEditor": {
+    "message": "Failed: editor rejected text input. Open Console (F12) for details."
+  },
+  "typingWarnTypoDisabled": {
+    "message": "Warning: Docs rejected deletion, typo simulation disabled. Check the last word."
+  },
+  "typingFinished": {
+    "message": "Typing finished!"
+  },
+  "typingStopped": {
+    "message": "Typing stopped."
+  },
+  "typingPaused": {
+    "message": "Typing paused ($1/$2)."
+  },
+  "typingResumed": {
+    "message": "Typing resumed."
+  }
+}
