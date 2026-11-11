@@ -1,0 +1,299 @@
+{
+  "extName": {
+    "message": "AutoKetik",
+    "description": "Nama ekstensi"
+  },
+  "extDescription": {
+    "message": "Mengetik teks dengan simulasi manusia di halaman web aktif.",
+    "description": "Deskripsi ekstensi"
+  },
+  "sidebarTitle": {
+    "message": "AutoKetik Sidebar",
+    "description": "Judul sidebar"
+  },
+  "openSidebarBtn": {
+    "message": "Buka Sidebar ↗"
+  },
+  "openSidebarBtnTitle": {
+    "message": "Buka di panel samping agar tidak tertutup saat berpindah fokus"
+  },
+  "sourceLabel": {
+    "message": "Sumber teks"
+  },
+  "sourceOptionPaste": {
+    "message": "Tempel / tulis"
+  },
+  "sourceOptionUrl": {
+    "message": "URL Google Docs publik"
+  },
+  "sourceOptionFile": {
+    "message": "File teks / HTML"
+  },
+  "fetchBtn": {
+    "message": "Ambil"
+  },
+  "textLabel": {
+    "message": "Teks yang akan diketik"
+  },
+  "textPlaceholder": {
+    "message": "Ketik atau tempel teks di sini..."
+  },
+  "previewAriaLabel": {
+    "message": "Pratinjau dokumen"
+  },
+  "toggleSourceHtml": {
+    "message": "Lihat sumber HTML"
+  },
+  "toggleSourceDoc": {
+    "message": "Kembali ke pratinjau dokumen"
+  },
+  "wpmLabel": {
+    "message": "Kecepatan (WPM)"
+  },
+  "wpmMinAria": {
+    "message": "Kecepatan WPM minimum"
+  },
+  "wpmMaxAria": {
+    "message": "Kecepatan WPM maksimum"
+  },
+  "rangeModeConstant": {
+    "message": "Konstan"
+  },
+  "rangeModeRandom": {
+    "message": "Acak antara dua nilai konstan"
+  },
+  "rangeMenuTitle": {
+    "message": "Opsi variasi"
+  },
+  "delayLabel": {
+    "message": "Hitung mundur (detik)"
+  },
+  "advancedSummary": {
+    "message": "Simulasi & Tempo Lanjutan"
+  },
+  "waveLabel": {
+    "message": "Gelombang (detik)"
+  },
+  "startLabel": {
+    "message": "Mulai"
+  },
+  "startFast": {
+    "message": "Cepat"
+  },
+  "startSlow": {
+    "message": "Lambat"
+  },
+  "typoLabel": {
+    "message": "Peluang Typo (0–1)"
+  },
+  "seedLabel": {
+    "message": "Seed (opsional)"
+  },
+  "seedPlaceholder": {
+    "message": "acak"
+  },
+  "thinkEveryLabel": {
+    "message": "Jeda tiap kata"
+  },
+  "thinkEveryMinAria": {
+    "message": "Jumlah minimum kata sebelum jeda"
+  },
+  "thinkEveryMaxAria": {
+    "message": "Jumlah maksimum kata sebelum jeda"
+  },
+  "thinkPauseLabel": {
+    "message": "Durasi jeda (s)"
+  },
+  "thinkPauseMinAria": {
+    "message": "Durasi jeda minimum dalam detik"
+  },
+  "thinkPauseMaxAria": {
+    "message": "Durasi jeda maksimum dalam detik"
+  },
+  "typoWordsLabel": {
+    "message": "Kata sebelum sadar"
+  },
+  "typoWordsMinAria": {
+    "message": "Jumlah minimum kata"
+  },
+  "typoWordsMaxAria": {
+    "message": "Jumlah maksimum kata"
+  },
+  "typoDelayLabel": {
+    "message": "Jeda sadar (detik)"
+  },
+  "typoDelayMinAria": {
+    "message": "Jeda minimum dalam detik"
+  },
+  "typoDelayMaxAria": {
+    "message": "Jeda maksimum dalam detik"
+  },
+  "noTypoLabel": {
+    "message": "Nonaktifkan typo"
+  },
+  "previewBtn": {
+    "message": "Pratinjau"
+  },
+  "startBtn": {
+    "message": "Mulai Mengetik"
+  },
+  "pauseBtn": {
+    "message": "Jeda"
+  },
+  "resumeBtn": {
+    "message": "Lanjut"
+  },
+  "stopBtn": {
+    "message": "Berhenti"
+  },
+  "defaultStatusPopup": {
+    "message": "Klik 'Mulai Mengetik', lalu segera klik kolom tujuan di halaman sebelum hitung mundur selesai."
+  },
+  "defaultStatusSidebar": {
+    "message": "Klik 'Mulai Mengetik', lalu fokuskan kursor ke dokumen/kolom input di halaman web aktif."
+  },
+  "tipPopupNote": {
+    "message": "Tips: Gunakan <strong>Buka Sidebar</strong> jika Anda ingin panel tetap terbuka saat berpindah fokus atau mengetik dokumen panjang."
+  },
+  "tipSidebarNote": {
+    "message": "Panel sidebar tetap terbuka saat Anda mengeklik halaman dokumen."
+  },
+
+  "sourceTip": {
+    "message": "Sumber konten: ketik/tempel langsung, ambil otomatis dari link Google Docs publik, atau unggah file .txt/.html."
+  },
+  "textTip": {
+    "message": "Isi naskah atau dokumen yang akan disimulasikan ketikannya secara otomatis ke halaman web aktif."
+  },
+  "wpmTip": {
+    "message": "Kecepatan mengetik dalam Words Per Minute (konstan atau acak antara dua nilai konstan)."
+  },
+  "delayTip": {
+    "message": "Waktu tunggu sebelum mulai mengetik. Beri Anda jeda waktu untuk mengklik kolom input tujuan di halaman web."
+  },
+  "waveTip": {
+    "message": "Panjang siklus ritme manusia (kecepatan mengetik akan naik dan turun secara bertahap menyerupai gelombang)."
+  },
+  "startTip": {
+    "message": "Tempo awal saat mulai mengetik: 'Cepat' lalu melambat, atau 'Lambat' lalu bertahap semakin cepat."
+  },
+  "typoTip": {
+    "message": "Peluang salah ketik tombol keyboard tetangga (misal 0.03 = 3% kemungkinan terjadi typo per karakter)."
+  },
+  "seedTip": {
+    "message": "Nilai dasar generator acak (RNG). Jika diisi angka yang sama, pola variasi kecepatan dan letak typo akan berulang persis sama."
+  },
+  "thinkEveryTip": {
+    "message": "Jumlah kata yang diketik sebelum jeda berpikir sejenak seperti manusia (bisa angka tetap atau rentang acak)."
+  },
+  "thinkPauseTip": {
+    "message": "Lama waktu berhenti sejenak saat jeda berpikir dalam satuan detik (bisa angka tetap atau rentang acak)."
+  },
+  "typoWordsTip": {
+    "message": "Berapa kata yang tetap terus diketik setelah salah ketik sebelum disadari lalu dihapus dengan tombol backspace."
+  },
+  "typoDelayTip": {
+    "message": "Waktu jeda berhenti sejenak saat menyadari ada kesalahan ketik sebelum mulai menghapus dengan backspace."
+  },
+  "noTypoTip": {
+    "message": "Centang opsi ini jika Anda ingin pengetikan 100% sempurna tanpa simulasi salah ketik sama sekali."
+  },
+
+  "statusFileLoaded": {
+    "message": "File berhasil dimuat: $1 ($2 karakter isi$3)."
+  },
+  "statusHtmlNotCounted": {
+    "message": "; HTML/CSS tidak dihitung"
+  },
+  "statusFileError": {
+    "message": "Gagal membaca file: $1"
+  },
+  "statusDocsInvalidUrl": {
+    "message": "URL Google Docs tidak valid. Pastikan link memiliki format https://docs.google.com/document/d/..."
+  },
+  "statusDocsDownloading": {
+    "message": "Mengunduh teks dari Google Docs..."
+  },
+  "statusDocsDownloadError": {
+    "message": "Gagal mengunduh dokumen. Pastikan akses Google Docs disetel ke publik ('Siapa saja yang memiliki link')."
+  },
+  "statusDocsLoaded": {
+    "message": "Teks Google Docs berhasil dimuat ($1 karakter isi; HTML/CSS tidak dihitung)."
+  },
+  "statusSidebarMenu1": {
+    "message": "Buka menu browser Firefox > Sidebar > AutoKetik."
+  },
+  "statusSidebarMenu2": {
+    "message": "Buka menu Firefox: Tekan Alt, lalu pilih View > Sidebar > AutoKetik."
+  },
+  "statusTextEmpty": {
+    "message": "Teks masih kosong. Masukkan atau tempel teks terlebih dahulu."
+  },
+  "statusPreviewStats": {
+    "message": "Pratinjau: $1 karakter isi | $2 kata."
+  },
+  "statusEnterTextFirst": {
+    "message": "Masukkan atau tempel teks yang ingin diketik terlebih dahulu."
+  },
+  "statusTabDetectError": {
+    "message": "Gagal mendeteksi tab aktif: $1"
+  },
+  "statusNoTabFound": {
+    "message": "Tidak ada tab aktif yang ditemukan."
+  },
+  "statusProtectedPage": {
+    "message": "Ekstensi tidak dapat berjalan di halaman sistem Firefox (about:). Buka tab halaman web biasa."
+  },
+  "statusCountdown": {
+    "message": "Hitung mundur $1 detik... Segera klik kolom tujuan di halaman!"
+  },
+  "statusTypingStarted": {
+    "message": "Pengetikan dimulai pada kolom aktif di halaman."
+  },
+  "statusCommandSent": {
+    "message": "Perintah $1 dikirim."
+  },
+  "statusScriptNotActive": {
+    "message": "Skrip belum aktif di tab ini. Silakan muat ulang (Refresh / F5) tab web Anda lalu coba lagi."
+  },
+
+  "typingEmptyText": {
+    "message": "Teks kosong."
+  },
+  "typingCountdown": {
+    "message": "Hitung mundur $1 detik... Fokuskan kursor ke kolom tujuan."
+  },
+  "typingTargetError": {
+    "message": "Gagal: Kolom input tidak aktif. Klik kolom teks atau editor di halaman lalu ulangi."
+  },
+  "typingStarted": {
+    "message": "Mengetik dimulai$1... (0/$2)"
+  },
+  "typingDocsMode": {
+    "message": " (mode Google Docs)"
+  },
+  "typingWarnEnter": {
+    "message": "Peringatan: Enter tidak diterima editor ini."
+  },
+  "typingErrorDocs": {
+    "message": "Gagal: Google Docs menolak input teks. Buka Console (F12) untuk detail."
+  },
+  "typingErrorEditor": {
+    "message": "Gagal: editor menolak input teks. Buka Console (F12) untuk detail."
+  },
+  "typingWarnTypoDisabled": {
+    "message": "Peringatan: Docs tidak menerima penghapusan, simulasi typo dimatikan. Periksa kata terakhir."
+  },
+  "typingFinished": {
+    "message": "Pengetikan selesai!"
+  },
+  "typingStopped": {
+    "message": "Pengetikan dihentikan."
+  },
+  "typingPaused": {
+    "message": "Pengetikan dijeda ($1/$2)."
+  },
+  "typingResumed": {
+    "message": "Pengetikan dilanjutkan."
+  }
+}
