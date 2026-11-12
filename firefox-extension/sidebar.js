@@ -1,9 +1,46 @@
 (async function () {
   const API = globalThis.browser ?? globalThis.chrome;
 
+  const t = (key, subs = [], fallback = "") => {
+    try {
+      const msg = API.i18n ? API.i18n.getMessage(key, subs) : "";
+      return msg || fallback || key;
+    } catch {
+      return fallback || key;
+    }
+  };
+
+  function localizeHtml() {
+    if (!API.i18n) return;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const msg = API.i18n.getMessage(el.dataset.i18n);
+      if (msg) el.textContent = msg;
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+      const msg = API.i18n.getMessage(el.dataset.i18nHtml);
+      if (msg) el.innerHTML = msg;
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+      const msg = API.i18n.getMessage(el.dataset.i18nPlaceholder);
+      if (msg) el.placeholder = msg;
+    });
+    document.querySelectorAll("[data-i18n-title]").forEach(el => {
+      const msg = API.i18n.getMessage(el.dataset.i18nTitle);
+      if (msg) el.title = msg;
+    });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach(el => {
+      const msg = API.i18n.getMessage(el.dataset.i18nAriaLabel);
+      if (msg) el.setAttribute("aria-label", msg);
+    });
+  }
+
+  localizeHtml();
+
   const ids = [
     "source", "text", "url", "wpm", "wave", "start",
-    "typo", "delay", "seed", "thinkEvery", "thinkPause",
+    "typo", "delay", "seed",
+    "wpmMode", "wpmMin", "wpmMax",
+    "thinkEvery", "thinkPause",
     "thinkEveryMode", "thinkPauseMode", "thinkEveryMin", "thinkEveryMax", "thinkPauseMin", "thinkPauseMax",
     "typoWords", "typoDelay", "typoWordsMode", "typoDelayMode",
     "typoWordsMin", "typoWordsMax", "typoDelayMin", "typoDelayMax", "noTypo"
@@ -65,13 +102,13 @@
     renderDocumentPreview(raw);
     $("text").classList.add("hidden");
     $("documentPreview").classList.remove("hidden");
-    $("toggleSource").textContent = "Lihat sumber HTML";
+    $("toggleSource").textContent = t("toggleSourceHtml", [], "Lihat sumber HTML");
     return true;
   }
   function showRawSource() {
     $("documentPreview").classList.add("hidden");
     $("text").classList.remove("hidden");
-    $("toggleSource").textContent = "Kembali ke pratinjau dokumen";
+    $("toggleSource").textContent = t("toggleSourceDoc", [], "Kembali ke pratinjau dokumen");
     $("text").focus();
   }
   function syncRange(name, save = true) {
@@ -89,7 +126,7 @@
     });
   }
   function initRangeControls(saved = {}) {
-    for (const name of ["thinkEvery", "thinkPause", "typoWords", "typoDelay"]) {
+    for (const name of ["wpm", "thinkEvery", "thinkPause", "typoWords", "typoDelay"]) {
       const raw = String(saved[name] ?? $(`${name}`).value);
       const match = raw.match(/^\s*(-?\d+(?:\.\d+)?)\s*(?:-\s*(-?\d+(?:\.\d+)?))?\s*$/);
       if (match) {
@@ -122,6 +159,20 @@
     if (urlBox) urlBox.classList.toggle("hidden", src !== "url");
     if (fileBox) fileBox.classList.toggle("hidden", src !== "file");
   }
+
+  // Info tooltip interaction (prevent triggering input & allow click/touch toggle)
+  document.querySelectorAll(".info-tip").forEach(tip => {
+    tip.addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const wasActive = tip.classList.contains("is-active");
+      document.querySelectorAll(".info-tip.is-active").forEach(el => el.classList.remove("is-active"));
+      if (!wasActive) tip.classList.add("is-active");
+    });
+  });
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".info-tip.is-active").forEach(el => el.classList.remove("is-active"));
+  });
 
   // Load saved values
   let storedSettings = {};
@@ -170,9 +221,10 @@
         if (!showDocumentPreview()) $("text").classList.remove("hidden");
         API.storage.local.set({ text: content });
         const stats = getSourceStats(content);
-        setStatus(`File berhasil dimuat: ${file.name} (${stats.characters.toLocaleString("id-ID")} karakter isi${isHtmlSource(content) ? "; HTML/CSS tidak dihitung" : ""})`);
+        const extra = isHtmlSource(content) ? t("statusHtmlNotCounted", [], "; HTML/CSS tidak dihitung") : "";
+        setStatus(t("statusFileLoaded", [file.name, stats.characters.toLocaleString(), extra], `File berhasil dimuat: ${file.name} (${stats.characters.toLocaleString()} karakter isi${extra})`));
       } catch (err) {
-        setStatus(`Gagal membaca file: ${err.message}`);
+        setStatus(t("statusFileError", [err.message], `Gagal membaca file: ${err.message}`));
       }
     }
   });
@@ -182,16 +234,16 @@
     const urlVal = $("url").value.trim();
     const match = urlVal.match(/\/document\/d\/([a-zA-Z0-9-_]+)/);
     if (!match) {
-      setStatus("URL Google Docs tidak valid. Pastikan link memiliki format https://docs.google.com/document/d/...");
+      setStatus(t("statusDocsInvalidUrl", [], "URL Google Docs tidak valid. Pastikan link memiliki format https://docs.google.com/document/d/..."));
       return;
     }
 
-    setStatus("Mengunduh teks dari Google Docs...");
+    setStatus(t("statusDocsDownloading", [], "Mengunduh teks dari Google Docs..."));
     try {
       const exportUrl = `https://docs.google.com/document/d/${match[1]}/export?format=html`;
       const res = await fetch(exportUrl);
       if (!res.ok) {
-        throw new Error("Gagal mengunduh dokumen. Pastikan akses Google Docs disetel ke publik ('Siapa saja yang memiliki link').");
+        throw new Error(t("statusDocsDownloadError", [], "Gagal mengunduh dokumen. Pastikan akses Google Docs disetel ke publik ('Siapa saja yang memiliki link')."));
       }
       const text = await res.text();
       $("text").value = text;
@@ -199,29 +251,9 @@
       showDocumentPreview();
       API.storage.local.set({ text });
       const stats = getSourceStats(text);
-      setStatus(`Teks Google Docs berhasil dimuat (${stats.characters.toLocaleString("id-ID")} karakter isi; HTML/CSS tidak dihitung).`);
+      setStatus(t("statusDocsLoaded", [stats.characters.toLocaleString()], `Teks Google Docs berhasil dimuat (${stats.characters.toLocaleString()} karakter isi; HTML/CSS tidak dihitung).`));
     } catch (err) {
       setStatus(`Error: ${err.message}`);
-    }
-  });
-
-  // Popup has this control; the sidebar itself does not. Never let the missing
-  // popup-only button prevent the rest of the sidebar handlers from loading.
-  $("openSidebar")?.addEventListener("click", async () => {
-    try {
-      if (API.sidebarAction && typeof API.sidebarAction.open === "function") {
-        await API.sidebarAction.open();
-        window.close();
-      } else {
-        const res = await API.runtime.sendMessage({ type: "OPEN_SIDEBAR" });
-        if (res && res.ok) {
-          window.close();
-        } else {
-          setStatus("Buka menu browser Firefox > Sidebar > AutoKetik.");
-        }
-      }
-    } catch {
-      setStatus("Buka menu Firefox: Tekan Alt, lalu pilih View > Sidebar > AutoKetik.");
     }
   });
 
@@ -229,12 +261,12 @@
   $("preview").addEventListener("click", () => {
     const text = $("text").value;
     if (!text.trim()) {
-      setStatus("Teks masih kosong. Masukkan atau tempel teks terlebih dahulu.");
+      setStatus(t("statusTextEmpty", [], "Teks masih kosong. Masukkan atau tempel teks terlebih dahulu."));
       return;
     }
     if (isHtmlSource(text)) showDocumentPreview();
     const stats = getSourceStats(text);
-    setStatus(`Pratinjau: ${stats.characters.toLocaleString("id-ID")} karakter isi | ${stats.words.toLocaleString("id-ID")} kata.`);
+    setStatus(t("statusPreviewStats", [stats.characters.toLocaleString(), stats.words.toLocaleString()], `Pratinjau: ${stats.characters.toLocaleString()} karakter isi | ${stats.words.toLocaleString()} kata.`));
   });
   $("toggleSource")?.addEventListener("click", () => {
     if ($("documentPreview").classList.contains("hidden")) showDocumentPreview();
@@ -250,7 +282,7 @@
   async function sendCommand(type) {
     const text = $("text").value;
     if (type === "START" && !text.trim()) {
-      setStatus("Masukkan atau tempel teks yang ingin diketik terlebih dahulu.");
+      setStatus(t("statusEnterTextFirst", [], "Masukkan atau tempel teks yang ingin diketik terlebih dahulu."));
       return;
     }
 
@@ -258,19 +290,19 @@
     try {
       tabs = await API.tabs.query({ active: true, currentWindow: true });
     } catch (err) {
-      setStatus("Gagal mendeteksi tab aktif: " + err.message);
+      setStatus(t("statusTabDetectError", [err.message], "Gagal mendeteksi tab aktif: " + err.message));
       return;
     }
 
     const tab = tabs?.[0];
     if (!tab || !tab.id) {
-      setStatus("Tidak ada tab aktif yang ditemukan.");
+      setStatus(t("statusNoTabFound", [], "Tidak ada tab aktif yang ditemukan."));
       return;
     }
 
     // Check if on protected browser page
     if (tab.url && (tab.url.startsWith("about:") || tab.url.startsWith("moz-extension:") || tab.url.startsWith("chrome:"))) {
-      setStatus("Ekstensi tidak dapat berjalan di halaman sistem Firefox (about:). Buka tab halaman web biasa.");
+      setStatus(t("statusProtectedPage", [], "Ekstensi tidak dapat berjalan di halaman sistem Firefox (about:). Buka tab halaman web biasa."));
       return;
     }
 
@@ -286,7 +318,7 @@
       typoWords: $("typoWords").value,
       typoDelay: $("typoDelay").value
     };
-      options.html = $("text").dataset.html === "1" || /<!doctype\s+html|<html\b|<(?:p|h[1-6]|div|li|span)\b/i.test(text);
+    options.html = $("text").dataset.html === "1" || /<!doctype\s+html|<html\b|<(?:p|h[1-6]|div|li|span)\b/i.test(text);
 
     try {
       await API.tabs.sendMessage(tab.id, {
@@ -298,15 +330,15 @@
       if (type === "START") {
         const delaySec = options.delay;
         if (delaySec > 0) {
-          setStatus(`Hitung mundur ${delaySec} detik... Segera klik kolom tujuan di halaman!`);
+          setStatus(t("statusCountdown", [String(delaySec)], `Hitung mundur ${delaySec} detik... Segera klik kolom tujuan di halaman!`));
         } else {
-          setStatus("Pengetikan dimulai pada kolom aktif di halaman.");
+          setStatus(t("statusTypingStarted", [], "Pengetikan dimulai pada kolom aktif di halaman."));
         }
       } else {
-        setStatus(`Perintah ${type.toLowerCase()} dikirim.`);
+        setStatus(t("statusCommandSent", [type.toLowerCase()], `Perintah ${type.toLowerCase()} dikirim.`));
       }
     } catch {
-      setStatus("Skrip belum aktif di tab ini. Silakan muat ulang (Refresh / F5) tab web Anda lalu coba lagi.");
+      setStatus(t("statusScriptNotActive", [], "Skrip belum aktif di tab ini. Silakan muat ulang (Refresh / F5) tab web Anda lalu coba lagi."));
     }
   }
 
